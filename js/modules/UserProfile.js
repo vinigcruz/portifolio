@@ -1,13 +1,14 @@
 export class UserProfile {
     static DEFAULT_STATE = {
         name: 'Vinicius Guimarães da Cruz',
-        shortName: 'Vinicius Guimarães',
+        shortName: 'Vinicius Cruz ',
         age: '25 anos',
-        email: 'vinicius.infra.sec@gmail.com',
+        email: 'viniciusgcruz@gmail.com',
         phone: '(41)9 8406-5476',
         linkedin: 'https://www.linkedin.com/in/viniciusgcruz/',
         github: 'https://github.com/vinigcruz',
-        pitchUrl: 'https://youtu.be/pitch-vinicius-guimaraes'
+        pitchUrl: 'https://youtu.be/pitch-vinicius-guimaraes',
+        resumeUrl: './curriculo.pdf'
     };
 
     constructor(storageManager, toast) {
@@ -110,7 +111,8 @@ export class UserProfile {
             { id: 'cfg-phone', val: this.data.phone },
             { id: 'cfg-linkedin', val: this.data.linkedin },
             { id: 'cfg-github', val: this.data.github },
-            { id: 'cfg-pitch', val: this.data.pitchUrl }
+            { id: 'cfg-pitch', val: this.data.pitchUrl },
+            { id: 'cfg-resume', val: this.data.resumeUrl }
         ];
 
         fields.forEach(f => {

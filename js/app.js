@@ -7,6 +7,7 @@ import { TerminalDiagnostics } from './modules/TerminalDiagnostics.js';
 import { PDFExporter } from './modules/PDFExporter.js';
 import { NavigationController } from './modules/NavigationController.js';
 import { ContactFormHandler } from './modules/ContactFormHandler.js';
+import { PWAInstaller } from './modules/PWAInstaller.js';
 
 export class PortfolioApp {
     constructor() {
@@ -16,14 +17,15 @@ export class PortfolioApp {
         this.modal = new ModalManager('config-modal', this.userProfile);
         this.pitchPlayer = new PitchPlayer(this.toast);
         this.terminal = new TerminalDiagnostics();
-        this.pdfExporter = new PDFExporter(this.toast);
+        this.pdfExporter = new PDFExporter(this.toast, this.userProfile);
         this.navigation = new NavigationController();
         this.contactForm = new ContactFormHandler(this.toast);
+        this.pwa = new PWAInstaller(this.toast);
     }
 
     start() {
         this.userProfile.render();
-        console.log('[PortfolioApp] Inicializado com sucesso em ES Modules.');
+        console.log('[PortfolioApp] Inicializado com sucesso em ES Modules + PWA.');
     }
 }
 

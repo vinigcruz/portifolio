@@ -3,10 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0a0f1d">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="VG Portfólio">
     <title>Vinicius Guimarães | Infraestrutura de TI & Cibersegurança</title>
     <meta name="description"
         content="Portfólio profissional de Vinicius Guimarães da Cruz — Especialista em Infraestrutura de TI, Redes Corporativas e Cibersegurança Defensiva (Blue Team).">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="icon" type="image/svg+xml" href="./icons/icon-192.svg">
+    <link rel="apple-touch-icon" href="./icons/icon-192.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -49,8 +57,10 @@
                 <a href="#pitch" class="nav-link">Vídeo Pitch</a>
                 <a href="#contato" class="nav-link">Contato</a>
                 <div class="nav-actions">
-                    <button id="btn-export-pdf-nav" class="btn btn-outline btn-sm"
-                        title="Exportar Currículo / Portfólio em PDF">
+                    <button id="btn-install-pwa" class="btn btn-secondary btn-sm" title="Instalar App no Celular">
+                        <i class="fa-solid fa-mobile-screen-button"></i> App
+                    </button>
+                    <button id="btn-export-pdf-nav" class="btn btn-outline btn-sm" title="Abrir Currículo em PDF">
                         <i class="fa-solid fa-file-pdf"></i> PDF
                     </button>
                     <button id="btn-open-config-nav" class="btn btn-icon btn-sm" title="Configurar Dados do Portfólio">
@@ -85,7 +95,10 @@
                             <i class="fa-solid fa-server"></i> Ver Homelab &amp; Projetos
                         </a>
                         <button id="hero-pdf-trigger" class="btn btn-secondary">
-                            <i class="fa-solid fa-download"></i> Salvar Portfólio (PDF)
+                            <i class="fa-solid fa-file-pdf"></i> Abrir Currículo (PDF)
+                        </button>
+                        <button id="btn-install-pwa-hero" class="btn btn-outline">
+                            <i class="fa-solid fa-download"></i> Instalar App
                         </button>
                         <button id="btn-open-config" class="btn btn-outline" title="Personalizar dados">
                             <i class="fa-solid fa-gear"></i> Personalizar
@@ -553,6 +566,10 @@
                 <div class="form-group">
                     <label for="cfg-pitch">URL do Vídeo Pitch</label>
                     <input type="url" id="cfg-pitch">
+                </div>
+                <div class="form-group">
+                    <label for="cfg-resume">Arquivo ou Link do Currículo (PDF)</label>
+                    <input type="text" id="cfg-resume" placeholder="./curriculo.pdf ou link externo">
                 </div>
                 <div class="modal-actions">
                     <button type="button" id="btn-reset-default" class="btn btn-outline">

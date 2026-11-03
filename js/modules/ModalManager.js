@@ -68,6 +68,7 @@ export class ModalManager {
     }
 
     handleSave() {
+        const resumeInput = document.getElementById('cfg-resume');
         const updated = {
             name: document.getElementById('cfg-name').value.trim(),
             age: document.getElementById('cfg-age').value.trim(),
@@ -75,7 +76,8 @@ export class ModalManager {
             phone: document.getElementById('cfg-phone').value.trim(),
             linkedin: document.getElementById('cfg-linkedin').value.trim(),
             github: document.getElementById('cfg-github').value.trim(),
-            pitchUrl: document.getElementById('cfg-pitch').value.trim()
+            pitchUrl: document.getElementById('cfg-pitch').value.trim(),
+            resumeUrl: resumeInput ? resumeInput.value.trim() : './curriculo.pdf'
         };
 
         this.userProfile.updateProfile(updated);
