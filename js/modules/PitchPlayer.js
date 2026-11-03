@@ -18,13 +18,8 @@ export class PitchPlayer {
         this.isPlaying = false;
 
         this.scriptPhrases = [
-            { time: 0, text: '"Olá! Meu nome é Vinicius Guimarães, tenho 25 anos e atuo com paixão em Infraestrutura e Segurança."' },
-            { time: 15, text: '"Trabalho há 3,5 anos na área de TI, com 1 ano de estágio e 2,5 anos como técnico de infraestrutura."' },
-            { time: 35, text: '"No meu dia a dia, gerencio switches gerenciáveis com VLANs, Access Points corporativos e atendo usuários."' },
-            { time: 65, text: '"Mantenho a operação rodando com SLA acima de 95%, garantindo cabeamento e sinal estável."' },
-            { time: 90, text: '"Em meus Homelabs, levo a segurança a sério: Proxmox VE, pfSense com Suricata e monitoramento Wazuh SIEM."' },
-            { time: 120, text: '"Estou me preparando para a certificação CompTIA Security+, unindo a visão física à lógica defensiva."' },
-            { time: 150, text: '"Busco oportunidades para agregar valor em equipes de Infraestrutura ou Blue Team. Muito obrigado!"' }
+            { time: 90, text: "Nos meus Homelabs, simulo ambientes corporativos com Windows Server, Active Directory, GPO, File Server e estações Windows 11 integradas ao domínio." },
+            { time: 105, text: "Também desenvolvo laboratórios de cibersegurança com Kali Linux, Parrot OS, Metasploitable 3, pfSense, Suricata e Wazuh SIEM." },
         ];
 
         this.init();

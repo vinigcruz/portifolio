@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vg-portfolio-v1';
+const CACHE_NAME = 'vg-portfolio-v2';
 const ASSETS_TO_CACHE = [
     './',
     './index.html',
@@ -7,10 +7,8 @@ const ASSETS_TO_CACHE = [
     './icons/icon-192.svg',
     './icons/icon-512.svg',
     './js/app.js',
-    './js/modules/StorageManager.js',
     './js/modules/ToastNotification.js',
     './js/modules/UserProfile.js',
-    './js/modules/ModalManager.js',
     './js/modules/PitchPlayer.js',
     './js/modules/TerminalDiagnostics.js',
     './js/modules/PDFExporter.js',
@@ -56,4 +54,3 @@ self.addEventListener('fetch', (event) => {
             .catch(() => caches.match(event.request).then((cached) => cached || caches.match('./index.html')))
     );
 });
-

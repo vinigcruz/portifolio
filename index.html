@@ -63,9 +63,6 @@
                     <button id="btn-export-pdf-nav" class="btn btn-outline btn-sm" title="Abrir Currículo em PDF">
                         <i class="fa-solid fa-file-pdf"></i> PDF
                     </button>
-                    <button id="btn-open-config-nav" class="btn btn-icon btn-sm" title="Configurar Dados do Portfólio">
-                        <i class="fa-solid fa-sliders"></i>
-                    </button>
                 </div>
             </nav>
         </div>
@@ -99,9 +96,6 @@
                         </button>
                         <button id="btn-install-pwa-hero" class="btn btn-outline">
                             <i class="fa-solid fa-download"></i> Instalar App
-                        </button>
-                        <button id="btn-open-config" class="btn btn-outline" title="Personalizar dados">
-                            <i class="fa-solid fa-gear"></i> Personalizar
                         </button>
                     </div>
 
@@ -517,71 +511,11 @@
             <p>&copy; 2026 <strong id="footer-name">Vinicius Guimarães</strong> &mdash; Infraestrutura de TI &amp;
                 Cibersegurança.</p>
             <div class="footer-links">
-                <button id="footer-btn-config" class="btn-link"><i class="fa-solid fa-sliders"></i> Configurar
-                    Dados</button>
-                <button id="footer-btn-pdf" class="btn-link"><i class="fa-solid fa-print"></i> Versão para Impressão /
-                    PDF</button>
+                <button id="footer-btn-pdf" class="btn-link"><i class="fa-solid fa-file-pdf"></i> Abrir Currículo
+                    (PDF)</button>
             </div>
         </div>
     </footer>
-
-    <!-- Modal de Configuração (ModalManager.js + UserProfile.js) -->
-    <div id="config-modal" class="modal-overlay" style="display: none;">
-        <div class="modal-card">
-            <div class="modal-header">
-                <h3><i class="fa-solid fa-user-gear"></i> Configurar Dados do Portfólio</h3>
-                <button id="modal-close-btn" class="btn-icon-close" aria-label="Fechar">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-            <form id="portfolio-config-form" class="modal-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="cfg-name">Nome Completo</label>
-                        <input type="text" id="cfg-name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="cfg-age">Idade / Resumo</label>
-                        <input type="text" id="cfg-age">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="cfg-email">E-mail Profissional</label>
-                        <input type="email" id="cfg-email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="cfg-phone">Telefone / WhatsApp</label>
-                        <input type="text" id="cfg-phone">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="cfg-linkedin">URL do LinkedIn</label>
-                    <input type="url" id="cfg-linkedin">
-                </div>
-                <div class="form-group">
-                    <label for="cfg-github">URL do GitHub</label>
-                    <input type="url" id="cfg-github">
-                </div>
-                <div class="form-group">
-                    <label for="cfg-pitch">URL do Vídeo Pitch</label>
-                    <input type="url" id="cfg-pitch">
-                </div>
-                <div class="form-group">
-                    <label for="cfg-resume">Arquivo ou Link do Currículo (PDF)</label>
-                    <input type="text" id="cfg-resume" placeholder="./curriculo.pdf ou link externo">
-                </div>
-                <div class="modal-actions">
-                    <button type="button" id="btn-reset-default" class="btn btn-outline">
-                        <i class="fa-solid fa-rotate-left"></i> Restaurar Padrão
-                    </button>
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fa-solid fa-floppy-disk"></i> Salvar Alterações
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
 
     <!-- Toast Notification (ToastNotification.js) -->
     <div id="toast-notification" class="toast-notification"></div>

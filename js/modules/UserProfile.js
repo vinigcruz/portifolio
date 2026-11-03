@@ -1,7 +1,7 @@
 export class UserProfile {
     static DEFAULT_STATE = {
         name: 'Vinicius Guimarães da Cruz',
-        shortName: 'Vinicius Cruz ',
+        shortName: 'Vinicius Cruz',
         age: '25 anos',
         email: 'viniciusgcruz@gmail.com',
         phone: '(41)9 8406-5476',
@@ -11,37 +11,12 @@ export class UserProfile {
         resumeUrl: './curriculo.pdf'
     };
 
-    constructor(storageManager, toast) {
-        this.storage = storageManager;
-        this.toast = toast;
-        this.data = this.storage.get(UserProfile.DEFAULT_STATE);
+    constructor() {
+        this.data = Object.assign({}, UserProfile.DEFAULT_STATE);
     }
 
     getProfile() {
         return Object.assign({}, this.data);
-    }
-
-    updateProfile(newData) {
-        if (newData.name) {
-            const parts = newData.name.trim().split(' ');
-            newData.shortName = parts.length > 1 ? `${parts[0]} ${parts[1]}` : parts[0];
-        }
-
-        this.data = Object.assign({}, this.data, newData);
-        const saved = this.storage.set(this.data);
-        this.render();
-
-        if (saved) {
-            this.toast.show('Dados profissionais atualizados com sucesso!');
-        }
-        return saved;
-    }
-
-    resetToDefault() {
-        this.data = Object.assign({}, UserProfile.DEFAULT_STATE);
-        this.storage.set(this.data);
-        this.render();
-        this.toast.show('Informações restauradas para o padrão do portfólio.');
     }
 
     render() {
@@ -98,26 +73,6 @@ export class UserProfile {
         document.querySelectorAll('.data-pitch-url').forEach(el => {
             el.textContent = this.data.pitchUrl;
             if (el.tagName === 'A') el.href = this.data.pitchUrl;
-        });
-
-        this.syncFormFields();
-    }
-
-    syncFormFields() {
-        const fields = [
-            { id: 'cfg-name', val: this.data.name },
-            { id: 'cfg-age', val: this.data.age },
-            { id: 'cfg-email', val: this.data.email },
-            { id: 'cfg-phone', val: this.data.phone },
-            { id: 'cfg-linkedin', val: this.data.linkedin },
-            { id: 'cfg-github', val: this.data.github },
-            { id: 'cfg-pitch', val: this.data.pitchUrl },
-            { id: 'cfg-resume', val: this.data.resumeUrl }
-        ];
-
-        fields.forEach(f => {
-            const el = document.getElementById(f.id);
-            if (el) el.value = f.val || '';
         });
     }
 }
