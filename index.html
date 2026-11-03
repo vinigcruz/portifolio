@@ -1,1 +1,575 @@
-<script type="module" src="./js/app.js"></script>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinicius Guimarães | Infraestrutura de TI & Cibersegurança</title>
+    <meta name="description"
+        content="Portfólio profissional de Vinicius Guimarães da Cruz — Especialista em Infraestrutura de TI, Redes Corporativas e Cibersegurança Defensiva (Blue Team).">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Cabeçalho exclusivo para impressão / PDF -->
+    <div class="print-only-header">
+        <h1 id="print-name">Vinicius Guimarães da Cruz</h1>
+        <p>Infraestrutura de TI &bull; Redes Corporativas &bull; Cibersegurança (Blue Team)</p>
+        <p>
+            <span class="data-email">vinicius.infra.sec@gmail.com</span> |
+            <span class="data-phone">(41)9 8406-5476</span> |
+            <span class="data-linkedin-url">www.linkedin.com/in/viniciusgcruz/</span> |
+            <span class="data-github-url">github.com/vinigcruz</span>
+        </p>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#inicio" class="nav-brand">
+                <span class="brand-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                <span id="nav-brand-name">Vinicius Guimarães</span>
+            </a>
+
+            <button id="mobile-toggle" class="mobile-toggle" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav id="nav-menu" class="nav-menu">
+                <a href="#inicio" class="nav-link active">Início</a>
+                <a href="#sobre" class="nav-link">Sobre & Skills</a>
+                <a href="#experiencia" class="nav-link">Experiência</a>
+                <a href="#projetos" class="nav-link">Homelab & Projetos</a>
+                <a href="#pitch" class="nav-link">Vídeo Pitch</a>
+                <a href="#contato" class="nav-link">Contato</a>
+                <div class="nav-actions">
+                    <button id="btn-export-pdf-nav" class="btn btn-outline btn-sm"
+                        title="Exportar Currículo / Portfólio em PDF">
+                        <i class="fa-solid fa-file-pdf"></i> PDF
+                    </button>
+                    <button id="btn-open-config-nav" class="btn btn-icon btn-sm" title="Configurar Dados do Portfólio">
+                        <i class="fa-solid fa-sliders"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        <span>Disponível para Infraestrutura &amp; Blue Team / SecOps</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Olá, eu sou <span id="hero-display-name" class="text-gradient">Vinicius Guimarães da Cruz</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Profissional de <strong>Infraestrutura de TI &amp; Cibersegurança</strong> com 3,5 anos de
+                        experiência prática em redes corporativas, switches gerenciáveis (VLANs), Wi-Fi empresarial e
+                        laboratórios avançados de segurança defensiva com <strong>Proxmox, pfSense, Suricata e Wazuh
+                            SIEM</strong>.
+                    </p>
+
+                    <div class="hero-cta-group">
+                        <a href="#projetos" class="btn btn-primary">
+                            <i class="fa-solid fa-server"></i> Ver Homelab &amp; Projetos
+                        </a>
+                        <button id="hero-pdf-trigger" class="btn btn-secondary">
+                            <i class="fa-solid fa-download"></i> Salvar Portfólio (PDF)
+                        </button>
+                        <button id="btn-open-config" class="btn btn-outline" title="Personalizar dados">
+                            <i class="fa-solid fa-gear"></i> Personalizar
+                        </button>
+                    </div>
+
+                    <div class="hero-social-row">
+                        <a id="hero-linkedin-link" href="https://www.linkedin.com/in/viniciusgcruz/" target="_blank"
+                            rel="noopener noreferrer" class="social-pill">
+                            <i class="fa-brands fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a id="hero-github-link" href="https://github.com/vinigcruz" target="_blank"
+                            rel="noopener noreferrer" class="social-pill">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                        <a href="mailto:vinicius.infra.sec@gmail.com" class="social-pill data-email">
+                            vinicius.infra.sec@gmail.com
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card de Perfil + Terminal Ao Vivo -->
+                <div class="hero-visual">
+                    <div class="profile-card">
+                        <div class="profile-card-header">
+                            <div class="avatar-badge">
+                                <i class="fa-solid fa-user-shield"></i>
+                            </div>
+                            <div>
+                                <h2 id="card-profile-name">Vinicius Guimarães</h2>
+                                <span class="role-tag">Infraestrutura &amp; SecOps | 25 anos</span>
+                            </div>
+                        </div>
+
+                        <div class="metrics-row">
+                            <div class="metric-item">
+                                <span class="metric-val">3.5+</span>
+                                <span class="metric-lbl">Anos em TI</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-val">&gt;95%</span>
+                                <span class="metric-lbl">SLA Operacional</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-val">24/7</span>
+                                <span class="metric-lbl">Monitoramento SIEM</span>
+                            </div>
+                        </div>
+
+                        <div class="terminal-window">
+                            <div class="terminal-header">
+                                <div class="term-dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <span class="term-title">secops-diagnostics — bash</span>
+                            </div>
+                            <div id="live-terminal-text" class="terminal-body">
+                                <p><span class="term-prompt">$</span> nmap -sS -p 22,80,443 10.0.10.1</p>
+                                <p class="term-ok">PORT 443/tcp OPEN (pfSense WebGUI) - Latency 0.31ms</p>
+                                <p class="term-cyan"><span class="term-prompt">$</span> infra-watchdog: all services
+                                    HEALTHY</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre & Competências Técnicas -->
+        <section id="sobre" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Arquitetura &amp; Defesa</span>
+                    <h2 class="section-title">Sobre Mim &amp; Competências Técnicas</h2>
+                    <p class="section-desc">
+                        Unindo a base sólida da camada física e lógica de redes à visibilidade e detecção de ameaças em
+                        Cibersegurança.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fa-solid fa-network-wired"></i></div>
+                        <h3>Redes &amp; Infraestrutura</h3>
+                        <p>Gerenciamento de switches L2/L3, segmentação por VLANs (802.1Q), STP, trunking, cabeamento
+                            estruturado e controladoras Wi-Fi corporativas (TP-Link Omada).</p>
+                        <div class="tag-list">
+                            <span>VLANs</span>
+                            <span>TCP/IP</span>
+                            <span>TP-Link Omada</span>
+                            <span>Cabeamento</span>
+                            <span>DHCP / DNS</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fa-solid fa-shield-virus"></i></div>
+                        <h3>Cibersegurança &amp; Blue Team</h3>
+                        <p>Implementação de firewalls perimetrais pfSense, inspeção de tráfego com IDS/IPS Suricata,
+                            análise de eventos e monitoramento ativo via Wazuh SIEM.</p>
+                        <div class="tag-list">
+                            <span>pfSense</span>
+                            <span>Suricata IDS/IPS</span>
+                            <span>Wazuh SIEM</span>
+                            <span>Hardening</span>
+                            <span>CompTIA Security+ (Prep)</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fa-solid fa-cubes"></i></div>
+                        <h3>Virtualização &amp; Operações</h3>
+                        <p>Administração de ambientes virtualizados com Proxmox VE, servidores Linux/Windows, suporte
+                            N1/N2 com SLA acima de 95% e documentação técnica.</p>
+                        <div class="tag-list">
+                            <span>Proxmox VE</span>
+                            <span>Linux Server</span>
+                            <span>Windows Server</span>
+                            <span>Active Directory</span>
+                            <span>SLA &gt; 95%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiência Profissional -->
+        <section id="experiencia" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Trajetória</span>
+                    <h2 class="section-title">Experiência Profissional &amp; Certificações</h2>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2,5 Anos &bull; Atuação Principal</span>
+                            <h3>Técnico de Infraestrutura de TI</h3>
+                            <p>
+                                Responsável pela sustentação da infraestrutura de rede corporativa, configuração e
+                                manutenção de switches gerenciáveis com segmentação em VLANs, administração de Access
+                                Points corporativos e suporte direto aos usuários mantendo índice de SLA superior a 95%.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">1 Ano &bull; Início de Carreira</span>
+                            <h3>Estagiário de Infraestrutura &amp; Suporte de TI</h3>
+                            <p>
+                                Atuação no diagnóstico de hardware, manutenção preventiva, organização de racks e patch
+                                panels, configuração de estações de trabalho e atendimento de chamados técnicos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Em Andamento &bull; Especialização</span>
+                            <h3>Preparação CompTIA Security+ &amp; Laboratório Blue Team</h3>
+                            <p>
+                                Aprofundamento prático em análise de vulnerabilidades, resposta a incidentes, regras de
+                                firewall, correlação de logs em SIEM e arquitetura Zero Trust.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Homelab & Projetos -->
+        <section id="projetos" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Laboratório Prático</span>
+                    <h2 class="section-title">Homelab &amp; Projetos de Engenharia</h2>
+                    <p class="section-desc">
+                        Ambientes reais simulados para validação de políticas de segurança, segmentação de tráfego e
+                        observabilidade.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-top">
+                            <span class="project-badge"><i class="fa-solid fa-fire-flame-curved"></i> Firewall &amp;
+                                IDS/IPS</span>
+                        </div>
+                        <h3>Perímetro Defensivo com pfSense &amp; Suricata</h3>
+                        <p>
+                            Topologia segmentada em múltiplas VLANs (Gerência, Corporativo, IoT e SOC) protegida por
+                            pfSense com mais de 42 mil regras ativas no Suricata para bloqueio de varreduras e exploits.
+                        </p>
+                        <div class="tag-list">
+                            <span>pfSense</span>
+                            <span>Suricata</span>
+                            <span>VLAN Tagging</span>
+                            <span>Firewall Rules</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-top">
+                            <span class="project-badge"><i class="fa-solid fa-eye"></i> SOC &amp; SIEM</span>
+                        </div>
+                        <h3>Monitoramento Centralizado com Wazuh SIEM</h3>
+                        <p>
+                            Implantação do Wazuh Manager integrado a agentes Linux e Windows para monitoramento de
+                            integridade de arquivos (FIM), detecção de força bruta SSH/RDP e conformidade CIS
+                            Benchmarks.
+                        </p>
+                        <div class="tag-list">
+                            <span>Wazuh SIEM</span>
+                            <span>Log Analysis</span>
+                            <span>FIM</span>
+                            <span>Blue Team</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-top">
+                            <span class="project-badge"><i class="fa-solid fa-server"></i> Virtualização</span>
+                        </div>
+                        <h3>Cluster Homelab em Proxmox VE</h3>
+                        <p>
+                            Ambiente virtualizado de alta disponibilidade executando containers LXC e máquinas virtuais
+                            para testes de ataque/defesa, snapshots automatizados e redes virtuais isoladas (Linux
+                            Bridges).
+                        </p>
+                        <div class="tag-list">
+                            <span>Proxmox VE</span>
+                            <span>LXC / KVM</span>
+                            <span>Linux Bridges</span>
+                            <span>Backup</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vídeo Pitch Interativo -->
+        <section id="pitch" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Apresentação Pessoal</span>
+                    <h2 class="section-title">Vídeo Pitch Profissional</h2>
+                    <p class="section-desc">
+                        Assista à apresentação rápida de <strong id="video-author-name">Vinicius Guimarães</strong> ou
+                        acompanhe o player interativo com transcrição sincronizada.
+                    </p>
+                </div>
+
+                <div class="pitch-box">
+                    <div class="pitch-preview">
+                        <div class="pitch-preview-content">
+                            <button id="play-pitch-btn" class="play-circle-btn" aria-label="Iniciar Pitch Interativo">
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+                            <h3>Iniciar Pitch Interativo (02:45)</h3>
+                            <p>Clique para reproduzir a apresentação com teleprompter sincronizado.</p>
+                        </div>
+
+                        <!-- Player Simulado controlado por PitchPlayer.js -->
+                        <div id="simulated-player" class="simulated-player" style="display: none;">
+                            <div class="sim-header">
+                                <div class="sim-status">
+                                    <div id="speaking-wave" class="speaking-wave">
+                                        <span></span><span></span><span></span><span></span>
+                                    </div>
+                                    <span>Apresentação em andamento</span>
+                                </div>
+                                <button id="close-sim-player" class="btn-icon-close" title="Fechar Player">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </div>
+
+                            <div class="sim-body">
+                                <p id="sim-teleprompter" class="sim-teleprompter">
+                                    "Olá! Meu nome é Vinicius Guimarães, tenho 25 anos e atuo com paixão em
+                                    Infraestrutura e Segurança."
+                                </p>
+                            </div>
+
+                            <div class="sim-controls">
+                                <button id="sim-play-pause-btn" class="btn btn-sm btn-primary">
+                                    <i class="fa-solid fa-pause"></i>
+                                </button>
+                                <div id="sim-bar-container" class="sim-bar-container">
+                                    <div id="sim-progress-fill" class="sim-progress-fill"></div>
+                                </div>
+                                <span id="sim-time" class="sim-time">00:00 / 02:45</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pitch-footer-bar">
+                        <div class="pitch-url-info">
+                            <i class="fa-brands fa-youtube"></i>
+                            <span>Link direto: </span>
+                            <a id="pitch-external-url" href="https://youtu.be/pitch-vinicius-guimaraes" target="_blank"
+                                rel="noopener noreferrer" class="data-pitch-url">
+                                https://youtu.be/pitch-vinicius-guimaraes
+                            </a>
+                        </div>
+                        <button id="btn-copy-pitch-link" class="btn btn-outline btn-sm">
+                            <i class="fa-regular fa-copy"></i> Copiar Link
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato & Networking -->
+        <section id="contato" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Vamos Conversar</span>
+                    <h2 class="section-title">Contato &amp; Canais Profissionais</h2>
+                    <p class="section-desc">
+                        Entre em contato para oportunidades em Infraestrutura de TI, Redes, Suporte N2/N3 ou
+                        Cibersegurança (SOC / Blue Team).
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info-card">
+                        <h3>Canais Diretos</h3>
+                        <ul class="contact-list">
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <div>
+                                    <span>E-mail</span>
+                                    <a href="mailto:vinicius.infra.sec@gmail.com"
+                                        class="data-email">vinicius.infra.sec@gmail.com</a>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                <div>
+                                    <span>Telefone / WhatsApp</span>
+                                    <a href="tel:41984065476" class="data-phone">(41)9 8406-5476</a>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-linkedin"></i>
+                                <div>
+                                    <span>LinkedIn</span>
+                                    <a href="https://www.linkedin.com/in/viniciusgcruz/" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="data-linkedin-url">www.linkedin.com/in/viniciusgcruz/</a>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-github"></i>
+                                <div>
+                                    <span>GitHub</span>
+                                    <a href="https://github.com/vinigcruz" target="_blank" rel="noopener noreferrer"
+                                        class="data-github-url">github.com/vinigcruz</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="contact-actions">
+                            <a id="net-linkedin-btn" href="https://www.linkedin.com/in/viniciusgcruz/" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-primary">
+                                <i class="fa-brands fa-linkedin"></i> Conectar no LinkedIn
+                            </a>
+                            <a id="net-github-btn" href="https://github.com/vinigcruz" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-outline">
+                                <i class="fa-brands fa-github"></i> Repositórios
+                            </a>
+                            <button id="btn-export-pdf" class="btn btn-secondary">
+                                <i class="fa-solid fa-file-pdf"></i> Exportar PDF
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-card">
+                        <h3>Envie uma Mensagem</h3>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="form-name">Seu Nome / Empresa</label>
+                                <input type="text" id="form-name" required
+                                    placeholder="Ex: Maria Silva - Tech Recruiter">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Seu E-mail</label>
+                                <input type="email" id="form-email" required placeholder="contato@empresa.com.br">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Mensagem</label>
+                                <textarea id="form-message" rows="4" required
+                                    placeholder="Olá Vinicius, gostaríamos de conversar sobre uma oportunidade..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="fa-solid fa-paper-plane"></i> Enviar Mensagem
+                            </button>
+                            <div id="form-feedback" class="form-feedback"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 <strong id="footer-name">Vinicius Guimarães</strong> &mdash; Infraestrutura de TI &amp;
+                Cibersegurança.</p>
+            <div class="footer-links">
+                <button id="footer-btn-config" class="btn-link"><i class="fa-solid fa-sliders"></i> Configurar
+                    Dados</button>
+                <button id="footer-btn-pdf" class="btn-link"><i class="fa-solid fa-print"></i> Versão para Impressão /
+                    PDF</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Configuração (ModalManager.js + UserProfile.js) -->
+    <div id="config-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-user-gear"></i> Configurar Dados do Portfólio</h3>
+                <button id="modal-close-btn" class="btn-icon-close" aria-label="Fechar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <form id="portfolio-config-form" class="modal-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cfg-name">Nome Completo</label>
+                        <input type="text" id="cfg-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cfg-age">Idade / Resumo</label>
+                        <input type="text" id="cfg-age">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cfg-email">E-mail Profissional</label>
+                        <input type="email" id="cfg-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cfg-phone">Telefone / WhatsApp</label>
+                        <input type="text" id="cfg-phone">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="cfg-linkedin">URL do LinkedIn</label>
+                    <input type="url" id="cfg-linkedin">
+                </div>
+                <div class="form-group">
+                    <label for="cfg-github">URL do GitHub</label>
+                    <input type="url" id="cfg-github">
+                </div>
+                <div class="form-group">
+                    <label for="cfg-pitch">URL do Vídeo Pitch</label>
+                    <input type="url" id="cfg-pitch">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" id="btn-reset-default" class="btn btn-outline">
+                        <i class="fa-solid fa-rotate-left"></i> Restaurar Padrão
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa-solid fa-floppy-disk"></i> Salvar Alterações
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification (ToastNotification.js) -->
+    <div id="toast-notification" class="toast-notification"></div>
+
+    <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>

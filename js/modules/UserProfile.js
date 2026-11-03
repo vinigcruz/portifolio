@@ -5,7 +5,7 @@ export class UserProfile {
         age: '25 anos',
         email: 'vinicius.infra.sec@gmail.com',
         phone: '(41)9 8406-5476',
-        linkedin: 'hthttps://www.linkedin.com/in/viniciusgcruz/',
+        linkedin: 'https://www.linkedin.com/in/viniciusgcruz/',
         github: 'https://github.com/vinigcruz',
         pitchUrl: 'https://youtu.be/pitch-vinicius-guimaraes'
     };
