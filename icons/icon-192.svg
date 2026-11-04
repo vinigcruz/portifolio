@@ -1,17 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#030508"/>
-      <stop offset="100%" stop-color="#0a1017"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00ff66"/>
-      <stop offset="100%" stop-color="#00e5ff"/>
-    </linearGradient>
-  </defs>
-  <rect width="192" height="192" rx="42" fill="url(#bg)"/>
-  <rect x="6" y="6" width="180" height="180" rx="36" fill="none" stroke="url(#accent)" stroke-width="3" opacity="0.45"/>
-  <path d="M96 34 L148 56 V96 C148 131 125 156 96 166 C67 156 44 131 44 96 V56 Z" fill="none" stroke="url(#accent)" stroke-width="8" stroke-linejoin="round"/>
-  <path d="M96 46 L136 63 V95 C136 123 118 143 96 152 V46 Z" fill="url(#accent)" opacity="0.2"/>
-  <text x="96" y="112" font-family="JetBrains Mono, monospace" font-weight="800" font-size="38" fill="#00ff66" text-anchor="middle">VG</text>
+  <rect width="192" height="192" rx="32" fill="#04070b"/>
+  <!-- Moldura técnica minimalista -->
+  <rect x="12" y="12" width="168" height="168" rx="22" fill="#070c12" stroke="#00ff66" stroke-width="2" stroke-opacity="0.35"/>
+  <!-- Barra superior de terminal -->
+  <line x1="12" y1="44" x2="180" y2="44" stroke="#00ff66" stroke-width="1.5" stroke-opacity="0.25"/>
+  <circle cx="30" cy="28" r="4" fill="#ff1e42"/>
+  <circle cx="44" cy="28" r="4" fill="#f59e0b" fill-opacity="0.8"/>
+  <circle cx="58" cy="28" r="4" fill="#00ff66"/>
+  <!-- Símbolo Terminal Root / SecOps (>_ ) -->
+  <path d="M52 84 L88 112 L52 140" fill="none" stroke="#00ff66" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="102" y1="140" x2="142" y2="140" stroke="#00e5ff" stroke-width="12" stroke-linecap="round"/>
 </svg>
