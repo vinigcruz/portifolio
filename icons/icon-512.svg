@@ -1,18 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0f1d"/>
-      <stop offset="100%" stop-color="#161f33"/>
+      <stop offset="0%" stop-color="#030508"/>
+      <stop offset="100%" stop-color="#0a1017"/>
     </linearGradient>
     <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00d4ff"/>
-      <stop offset="100%" stop-color="#10b981"/>
+      <stop offset="0%" stop-color="#00ff66"/>
+      <stop offset="100%" stop-color="#00e5ff"/>
     </linearGradient>
   </defs>
   <rect width="512" height="512" rx="112" fill="url(#bg)"/>
-  <rect x="16" y="16" width="480" height="480" rx="96" fill="none" stroke="url(#accent)" stroke-width="8" opacity="0.4"/>
+  <rect x="16" y="16" width="480" height="480" rx="96" fill="none" stroke="url(#accent)" stroke-width="8" opacity="0.45"/>
   <path d="M256 90 L394 148 V256 C394 348 333 415 256 442 C179 415 118 348 118 256 V148 Z" fill="none" stroke="url(#accent)" stroke-width="20" stroke-linejoin="round"/>
-  <path d="M256 122 L362 167 V253 C362 328 314 381 256 405 V122 Z" fill="url(#accent)" opacity="0.22"/>
-  <text x="256" y="298" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="108" fill="#f3f4f6" text-anchor="middle">VG</text>
+  <path d="M256 122 L362 167 V253 C362 328 314 381 256 405 V122 Z" fill="url(#accent)" opacity="0.2"/>
+  <text x="256" y="298" font-family="JetBrains Mono, monospace" font-weight="800" font-size="104" fill="#00ff66" text-anchor="middle">VG</text>
 </svg>
-

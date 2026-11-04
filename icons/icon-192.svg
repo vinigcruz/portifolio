@@ -1,18 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0f1d"/>
-      <stop offset="100%" stop-color="#161f33"/>
+      <stop offset="0%" stop-color="#030508"/>
+      <stop offset="100%" stop-color="#0a1017"/>
     </linearGradient>
     <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00d4ff"/>
-      <stop offset="100%" stop-color="#10b981"/>
+      <stop offset="0%" stop-color="#00ff66"/>
+      <stop offset="100%" stop-color="#00e5ff"/>
     </linearGradient>
   </defs>
   <rect width="192" height="192" rx="42" fill="url(#bg)"/>
-  <rect x="6" y="6" width="180" height="180" rx="36" fill="none" stroke="url(#accent)" stroke-width="3" opacity="0.4"/>
+  <rect x="6" y="6" width="180" height="180" rx="36" fill="none" stroke="url(#accent)" stroke-width="3" opacity="0.45"/>
   <path d="M96 34 L148 56 V96 C148 131 125 156 96 166 C67 156 44 131 44 96 V56 Z" fill="none" stroke="url(#accent)" stroke-width="8" stroke-linejoin="round"/>
-  <path d="M96 46 L136 63 V95 C136 123 118 143 96 152 V46 Z" fill="url(#accent)" opacity="0.22"/>
-  <text x="96" y="112" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="40" fill="#f3f4f6" text-anchor="middle">VG</text>
+  <path d="M96 46 L136 63 V95 C136 123 118 143 96 152 V46 Z" fill="url(#accent)" opacity="0.2"/>
+  <text x="96" y="112" font-family="JetBrains Mono, monospace" font-weight="800" font-size="38" fill="#00ff66" text-anchor="middle">VG</text>
 </svg>
-

@@ -114,49 +114,89 @@
                     </div>
                 </div>
 
-                <!-- Card de Perfil + Terminal Ao Vivo -->
+                <!-- Notebook 3D Interativo + Prompts Flutuantes (Estilo Mr. Robot) -->
                 <div class="hero-visual">
-                    <div class="profile-card">
-                        <div class="profile-card-header">
-                            <div class="avatar-badge">
-                                <i class="fa-solid fa-user-shield"></i>
+                    <div id="laptop-3d-stage" class="laptop-3d-stage" title="Mova o cursor para rotacionar o notebook em 3D">
+                        <div id="laptop-3d-rig" class="laptop-3d-rig is-floating">
+                            <!-- Prompts Holográficos Flutuantes em 3D -->
+                            <div class="floating-prompt prompt-tl">
+                                <span class="prompt-tag">[FSOCIETY_NODE]</span>
+                                <code>root@kali:~# nmap -sS -Pn 10.0.10.0/24</code>
                             </div>
-                            <div>
-                                <h2 id="card-profile-name">Vinicius Guimarães</h2>
-                                <span class="role-tag">Infraestrutura &amp; SecOps | 25 anos</span>
-                            </div>
-                        </div>
 
-                        <div class="metrics-row">
-                            <div class="metric-item">
-                                <span class="metric-val">3.5+</span>
-                                <span class="metric-lbl">Anos em TI</span>
+                            <div class="floating-prompt prompt-tr">
+                                <span class="prompt-tag tag-red">[IDS_SURICATA]</span>
+                                <code>42,109 rules :: 0 intrusions</code>
                             </div>
-                            <div class="metric-item">
-                                <span class="metric-val">&gt;95%</span>
-                                <span class="metric-lbl">SLA Operacional</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-val">24/7</span>
-                                <span class="metric-lbl">Monitoramento SIEM</span>
-                            </div>
-                        </div>
 
-                        <div class="terminal-window">
-                            <div class="terminal-header">
-                                <div class="term-dots">
-                                    <span class="dot red"></span>
-                                    <span class="dot yellow"></span>
-                                    <span class="dot green"></span>
+                            <div class="floating-prompt prompt-bl">
+                                <span class="prompt-tag tag-cyan">[WAZUH_SIEM]</span>
+                                <code>agent_status: ACTIVE [NSE3_LAB]</code>
+                            </div>
+
+                            <!-- Tela do Notebook (Lid) -->
+                            <div class="laptop-lid">
+                                <div class="laptop-screen-bezel">
+                                    <div class="laptop-camera-bar">
+                                        <span class="cam-lens"></span>
+                                        <span class="cam-led"></span>
+                                        <span class="tty-label">TTY1 // SECOPS_OS v4.2</span>
+                                    </div>
+
+                                    <div class="laptop-screen">
+                                        <div class="screen-glare"></div>
+                                        <div class="terminal-window">
+                                            <div class="terminal-header">
+                                                <div class="term-dots">
+                                                    <span class="dot red"></span>
+                                                    <span class="dot yellow"></span>
+                                                    <span class="dot green"></span>
+                                                </div>
+                                                <span class="term-title">root@vg-secops:~# — bash</span>
+                                            </div>
+                                            <div id="live-terminal-text" class="terminal-body">
+                                                <p><span class="term-prompt">root@secops:~#</span> nmap -sS -p 22,80,443 10.0.10.1</p>
+                                                <p class="term-ok">[+] PORT 443/tcp OPEN (pfSense WebGUI) - 0.31ms</p>
+                                                <p class="term-cyan"><span class="term-prompt">root@secops:~#</span> infra-watchdog: HEALTHY <span class="cursor-blink">█</span></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Sub-painel de status dentro da tela do notebook -->
+                                        <div class="screen-hud-bar">
+                                            <div class="hud- profile-mini">
+                                                <i class="fa-solid fa-user-secret"></i>
+                                                <div>
+                                                    <strong id="card-profile-name">Vinicius Cruz</strong>
+                                                    <span class="role-tag">Infra &amp; Blue Team | 25y</span>
+                                                </div>
+                                            </div>
+                                            <div class="hud-pills">
+                                                <span><strong class="metric-inline">3.5+</strong> Anos TI</span>
+                                                <span><strong class="metric-inline">&gt;95%</strong> SLA</span>
+                                                <span><strong class="metric-inline">24/7</strong> SIEM</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <span class="term-title">secops-diagnostics — bash</span>
                             </div>
-                            <div id="live-terminal-text" class="terminal-body">
-                                <p><span class="term-prompt">$</span> nmap -sS -p 22,80,443 10.0.10.1</p>
-                                <p class="term-ok">PORT 443/tcp OPEN (pfSense WebGUI) - Latency 0.31ms</p>
-                                <p class="term-cyan"><span class="term-prompt">$</span> infra-watchdog: all services
-                                    HEALTHY</p>
+
+                            <!-- Base / Teclado 3D do Notebook -->
+                            <div class="laptop-base">
+                                <div class="laptop-hinge"></div>
+                                <div class="laptop-keyboard">
+                                    <div class="kb-row"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                                    <div class="kb-row"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                                    <div class="kb-row"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                                    <div class="kb-row kb-space-row"><span></span><span class="kb-space"></span><span></span></div>
+                                </div>
+                                <div class="laptop-trackpad"></div>
+                                <div class="laptop-front-lip">
+                                    <div class="lip-notch"></div>
+                                </div>
                             </div>
+
+                            <!-- Sombra Neon no Chão -->
+                            <div class="laptop-shadow"></div>
                         </div>
                     </div>
                 </div>
@@ -194,12 +234,12 @@
                         <div class="skill-icon"><i class="fa-solid fa-shield-virus"></i></div>
                         <h3>Cibersegurança &amp; Blue Team</h3>
                         <p>Implementação de firewalls perimetrais pfSense, inspeção de tráfego com IDS/IPS Suricata,
-                            análise de eventos e monitoramento ativo via Wazuh SIEM.</p>
+                            análise de eventos, monitoramento ativo via Wazuh SIEM e trilha Fortinet NSE 3.</p>
                         <div class="tag-list">
                             <span>pfSense</span>
                             <span>Suricata IDS/IPS</span>
                             <span>Wazuh SIEM</span>
-                            <span>Hardening</span>
+                            <span>Fortinet NSE 3</span>
                             <span>CompTIA Security+ (Prep)</span>
                         </div>
                     </div>
@@ -258,11 +298,15 @@
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <span class="timeline-date">Em Andamento &bull; Especialização</span>
-                            <h3>Preparação CompTIA Security+ &amp; Laboratório Blue Team</h3>
+                            <span class="timeline-date">Em Andamento &bull; Trilha de Aprendizagem &amp;
+                                Certificações</span>
+                            <h3>Fortinet NSE 3 &amp; Preparação CompTIA Security+</h3>
                             <p>
-                                Aprofundamento prático em análise de vulnerabilidades, resposta a incidentes, regras de
-                                firewall, correlação de logs em SIEM e arquitetura Zero Trust.
+                                Evolução contínua na trilha oficial de segurança de redes <strong>Fortinet NSE
+                                    3</strong> e preparação para a certificação <strong>CompTIA Security+</strong>, com
+                                aprofundamento prático em firewalls de próxima geração (NGFW), análise de
+                                vulnerabilidades, resposta a incidentes, correlação de logs em SIEM e arquitetura Zero
+                                Trust.
                             </p>
                         </div>
                     </div>

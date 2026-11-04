@@ -13,7 +13,14 @@ export class PWAInstaller {
     init() {
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js').catch((err) => {
+                navigator.serviceWorker.register('./sw.js').then((reg) => {
+                    reg.update();
+                    document.addEventListener('visibilitychange', () => {
+                        if (document.visibilityState === 'visible') {
+                            reg.update();
+                        }
+                    });
+                }).catch((err) => {
                     console.warn('[PWAInstaller] Falha ao registrar Service Worker:', err);
                 });
             });
@@ -57,4 +64,3 @@ export class PWAInstaller {
         }
     }
 }
-

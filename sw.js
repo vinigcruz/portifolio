@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vg-portfolio-v2';
+const CACHE_NAME = 'vg-portfolio-v4';
 const ASSETS_TO_CACHE = [
     './',
     './index.html',
@@ -43,7 +43,7 @@ self.addEventListener('fetch', (event) => {
     if (event.request.method !== 'GET') return;
 
     event.respondWith(
-        fetch(event.request)
+        fetch(event.request, { cache: 'no-cache' })
             .then((networkResponse) => {
                 const clone = networkResponse.clone();
                 caches.open(CACHE_NAME).then((cache) => {
