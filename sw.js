@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vg-portfolio-v4';
+const CACHE_NAME = 'vg-portfolio-v5';
 const ASSETS_TO_CACHE = [
     './',
     './index.html',
@@ -42,13 +42,20 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
     if (event.request.method !== 'GET') return;
 
+    // Deixa arquivos PDF serem carregados diretamente pelo visualizador nativo do navegador
+    if (event.request.url.toLowerCase().includes('.pdf')) {
+        return;
+    }
+
     event.respondWith(
         fetch(event.request, { cache: 'no-cache' })
             .then((networkResponse) => {
-                const clone = networkResponse.clone();
-                caches.open(CACHE_NAME).then((cache) => {
-                    cache.put(event.request, clone);
-                });
+                if (networkResponse && networkResponse.status === 200) {
+                    const clone = networkResponse.clone();
+                    caches.open(CACHE_NAME).then((cache) => {
+                        cache.put(event.request, clone);
+                    });
+                }
                 return networkResponse;
             })
             .catch(() => caches.match(event.request).then((cached) => cached || caches.match('./index.html')))

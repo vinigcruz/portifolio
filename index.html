@@ -60,9 +60,10 @@
                     <button id="btn-install-pwa" class="btn btn-secondary btn-sm" title="Instalar App no Celular">
                         <i class="fa-solid fa-mobile-screen-button"></i> App
                     </button>
-                    <button id="btn-export-pdf-nav" class="btn btn-outline btn-sm" title="Abrir Currículo em PDF">
+                    <a id="btn-export-pdf-nav" href="./curriculo.pdf" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-outline btn-sm" title="Abrir Currículo em PDF">
                         <i class="fa-solid fa-file-pdf"></i> PDF
-                    </button>
+                    </a>
                 </div>
             </nav>
         </div>
@@ -91,9 +92,10 @@
                         <a href="#projetos" class="btn btn-primary">
                             <i class="fa-solid fa-server"></i> Ver Homelab &amp; Projetos
                         </a>
-                        <button id="hero-pdf-trigger" class="btn btn-secondary">
+                        <a id="hero-pdf-trigger" href="./curriculo.pdf" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-secondary">
                             <i class="fa-solid fa-file-pdf"></i> Abrir Currículo (PDF)
-                        </button>
+                        </a>
                         <button id="btn-install-pwa-hero" class="btn btn-outline">
                             <i class="fa-solid fa-download"></i> Instalar App
                         </button>
@@ -116,7 +118,8 @@
 
                 <!-- Notebook 3D Interativo + Prompts Flutuantes (Estilo Mr. Robot) -->
                 <div class="hero-visual">
-                    <div id="laptop-3d-stage" class="laptop-3d-stage" title="Mova o cursor para rotacionar o notebook em 3D">
+                    <div id="laptop-3d-stage" class="laptop-3d-stage"
+                        title="Mova o cursor para rotacionar o notebook em 3D">
                         <div id="laptop-3d-rig" class="laptop-3d-rig is-floating">
                             <!-- Prompts Holográficos Flutuantes em 3D -->
                             <div class="floating-prompt prompt-tl">
@@ -155,9 +158,11 @@
                                                 <span class="term-title">root@vg-secops:~# — bash</span>
                                             </div>
                                             <div id="live-terminal-text" class="terminal-body">
-                                                <p><span class="term-prompt">root@secops:~#</span> nmap -sS -p 22,80,443 10.0.10.1</p>
+                                                <p><span class="term-prompt">root@secops:~#</span> nmap -sS -p 22,80,443
+                                                    10.0.10.1</p>
                                                 <p class="term-ok">[+] PORT 443/tcp OPEN (pfSense WebGUI) - 0.31ms</p>
-                                                <p class="term-cyan"><span class="term-prompt">root@secops:~#</span> infra-watchdog: HEALTHY <span class="cursor-blink">█</span></p>
+                                                <p class="term-cyan"><span class="term-prompt">root@secops:~#</span>
+                                                    infra-watchdog: HEALTHY <span class="cursor-blink">█</span></p>
                                             </div>
                                         </div>
 
@@ -184,10 +189,17 @@
                             <div class="laptop-base">
                                 <div class="laptop-hinge"></div>
                                 <div class="laptop-keyboard">
-                                    <div class="kb-row"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-                                    <div class="kb-row"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-                                    <div class="kb-row"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-                                    <div class="kb-row kb-space-row"><span></span><span class="kb-space"></span><span></span></div>
+                                    <div class="kb-row">
+                                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                    </div>
+                                    <div class="kb-row">
+                                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                    </div>
+                                    <div class="kb-row">
+                                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                    </div>
+                                    <div class="kb-row kb-space-row"><span></span><span
+                                            class="kb-space"></span><span></span></div>
                                 </div>
                                 <div class="laptop-trackpad"></div>
                                 <div class="laptop-front-lip">
@@ -515,9 +527,10 @@
                                 rel="noopener noreferrer" class="btn btn-outline">
                                 <i class="fa-brands fa-github"></i> Repositórios
                             </a>
-                            <button id="btn-export-pdf" class="btn btn-secondary">
-                                <i class="fa-solid fa-file-pdf"></i> Exportar PDF
-                            </button>
+                            <a id="btn-export-pdf" href="./curriculo.pdf" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-secondary">
+                                <i class="fa-solid fa-file-pdf"></i> Abrir Currículo (PDF)
+                            </a>
                         </div>
                     </div>
 
@@ -555,8 +568,9 @@
             <p>&copy; 2026 <strong id="footer-name">Vinicius Guimarães</strong> &mdash; Infraestrutura de TI &amp;
                 Cibersegurança.</p>
             <div class="footer-links">
-                <button id="footer-btn-pdf" class="btn-link"><i class="fa-solid fa-file-pdf"></i> Abrir Currículo
-                    (PDF)</button>
+                <a id="footer-btn-pdf" href="./curriculo.pdf" target="_blank" rel="noopener noreferrer"
+                    class="btn-link"><i class="fa-solid fa-file-pdf"></i> Abrir Currículo
+                    (PDF)</a>
             </div>
         </div>
     </footer>

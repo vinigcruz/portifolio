@@ -13,14 +13,22 @@ export class PDFExporter {
             document.getElementById('footer-btn-pdf')
         ].filter(Boolean);
 
-        buttons.forEach(btn => btn.addEventListener('click', () => this.export()));
-    }
-
-    export() {
         const profile = this.userProfile ? this.userProfile.getProfile() : {};
         const resumeUrl = profile.resumeUrl || './curriculo.pdf';
 
-        this.toast.show('Abrindo currículo em PDF...', 'info', 3500);
-        window.open(resumeUrl, '_blank', 'noopener,noreferrer');
+        buttons.forEach((btn) => {
+            if (btn.tagName === 'A') {
+                btn.href = resumeUrl;
+                btn.target = '_blank';
+                btn.rel = 'noopener noreferrer';
+            }
+            btn.addEventListener('click', (e) => {
+                this.toast.show('Abrindo currículo em PDF...', 'info', 3500);
+                if (btn.tagName !== 'A') {
+                    e.preventDefault();
+                    window.open(resumeUrl, '_blank', 'noopener,noreferrer');
+                }
+            });
+        });
     }
 }
