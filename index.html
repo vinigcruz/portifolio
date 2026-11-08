@@ -168,7 +168,7 @@
 
                                         <!-- Sub-painel de status dentro da tela do notebook -->
                                         <div class="screen-hud-bar">
-                                            <div class="hud- profile-mini">
+                                            <div class="hud-profile-mini profile-mini">
                                                 <i class="fa-solid fa-user-secret"></i>
                                                 <div>
                                                     <strong id="card-profile-name">Vinicius Cruz</strong>
@@ -182,28 +182,60 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- Moldura inferior da tela com logo do notebook -->
+                                    <div class="laptop-chin">
+                                        <span class="laptop-brand-logo">SECOPS // PRO 16"</span>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Base / Teclado 3D do Notebook -->
+                            <!-- Base / Corpo 3D do Notebook (Teclado + Speakers + Palmrest + Trackpad + Borda 3D) -->
                             <div class="laptop-base">
                                 <div class="laptop-hinge"></div>
-                                <div class="laptop-keyboard">
-                                    <div class="kb-row">
-                                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+
+                                <div class="laptop-deck-top">
+                                    <div class="speaker-grille"></div>
+
+                                    <div class="laptop-keyboard">
+                                        <!-- Linha 1: Esc + F1-F12 + Power -->
+                                        <div class="kb-row kb-fn-row">
+                                            <span class="key-esc"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="key-pwr"></span>
+                                        </div>
+                                        <!-- Linha 2: Números + Backspace -->
+                                        <div class="kb-row kb-num-row">
+                                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="key-wide"></span>
+                                        </div>
+                                        <!-- Linha 3: Tab + QWERTY -->
+                                        <div class="kb-row kb-qwerty-row">
+                                            <span class="key-tab"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                        </div>
+                                        <!-- Linha 4: Caps + ASDF + Enter -->
+                                        <div class="kb-row kb-home-row">
+                                            <span class="key-caps"></span><span></span><span class="key-wasd"></span><span class="key-wasd"></span><span class="key-wasd"></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="key-enter"></span>
+                                        </div>
+                                        <!-- Linha 5: Shift + ZXCV + Shift -->
+                                        <div class="kb-row kb-shift-row">
+                                            <span class="key-shift"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span class="key-shift"></span>
+                                        </div>
+                                        <!-- Linha 6: Ctrl/Fn/Alt + Spacebar + Setas -->
+                                        <div class="kb-row kb-space-row">
+                                            <span></span><span></span><span></span><span></span><span class="kb-space"></span><span></span><span></span><span class="key-arrows"></span>
+                                        </div>
                                     </div>
-                                    <div class="kb-row">
-                                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                                    </div>
-                                    <div class="kb-row">
-                                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                                    </div>
-                                    <div class="kb-row kb-space-row"><span></span><span
-                                            class="kb-space"></span><span></span></div>
+
+                                    <div class="speaker-grille"></div>
                                 </div>
-                                <div class="laptop-trackpad"></div>
+
+                                <!-- Área de descanso de pulso (Palmrest) e Trackpad -->
+                                <div class="laptop-palmrest">
+                                    <div class="laptop-trackpad"></div>
+                                </div>
+
+                                <!-- Espessura frontal 3D do chassi de alumínio -->
                                 <div class="laptop-front-lip">
                                     <div class="lip-notch"></div>
+                                    <span class="sleep-led"></span>
                                 </div>
                             </div>
 

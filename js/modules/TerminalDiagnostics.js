@@ -61,8 +61,8 @@ export class TerminalDiagnostics {
             const clampedX = Math.max(0, Math.min(1, x));
             const clampedY = Math.max(0, Math.min(1, y));
 
-            const rotateY = (clampedX - 0.5) * 32;
-            const rotateX = (0.5 - clampedY) * 24;
+            const rotateY = (clampedX - 0.5) * 30;
+            const rotateX = 12 + (0.5 - clampedY) * 18;
 
             this.rig.classList.remove('is-floating');
             this.rig.style.transform = `rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateZ(10px)`;

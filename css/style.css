@@ -330,9 +330,9 @@ body::after {
    NOTEBOOK 3D FLUTUANTE & ROTACIONANDO + PROMPTS (MR. ROBOT)
    ========================================================= */
 .laptop-3d-stage {
-    perspective: 1200px;
+    perspective: 1100px;
     width: 100%;
-    padding: 1.5rem 0.5rem 2rem;
+    padding: 1.5rem 0.75rem 2.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -343,7 +343,7 @@ body::after {
 .laptop-3d-rig {
     position: relative;
     width: 100%;
-    max-width: 410px;
+    max-width: 420px;
     transform-style: preserve-3d;
     transition: transform 0.14s ease-out;
     --glare-x: 50%;
@@ -352,48 +352,48 @@ body::after {
 
 /* Animação contínua de flutuação e rotação 3D quando o mouse não está em cima */
 .laptop-3d-rig.is-floating {
-    animation: laptopFloatRotate 7s ease-in-out infinite;
+    animation: laptopFloatRotate 8s ease-in-out infinite;
 }
 
 @keyframes laptopFloatRotate {
     0% {
-        transform: translateY(0px) rotateX(6deg) rotateY(-12deg) rotateZ(-1deg);
+        transform: translateY(0px) rotateX(14deg) rotateY(-14deg) rotateZ(-1deg);
     }
     25% {
-        transform: translateY(-12px) rotateX(10deg) rotateY(4deg) rotateZ(0.5deg);
+        transform: translateY(-10px) rotateX(18deg) rotateY(4deg) rotateZ(0.5deg);
     }
     50% {
-        transform: translateY(-4px) rotateX(4deg) rotateY(13deg) rotateZ(1deg);
+        transform: translateY(-4px) rotateX(12deg) rotateY(14deg) rotateZ(1deg);
     }
     75% {
-        transform: translateY(-14px) rotateX(9deg) rotateY(-4deg) rotateZ(-0.5deg);
+        transform: translateY(-12px) rotateX(17deg) rotateY(-5deg) rotateZ(-0.5deg);
     }
     100% {
-        transform: translateY(0px) rotateX(6deg) rotateY(-12deg) rotateZ(-1deg);
+        transform: translateY(0px) rotateX(14deg) rotateY(-14deg) rotateZ(-1deg);
     }
 }
 
 /* Prompts Holográficos Flutuando ao redor do Notebook em 3D */
 .floating-prompt {
     position: absolute;
-    z-index: 20;
-    background: rgba(4, 9, 14, 0.92);
+    z-index: 30;
+    background: rgba(4, 9, 14, 0.94);
     border: 1px solid rgba(0, 255, 102, 0.45);
     border-left: 3px solid var(--accent-cyan);
     border-radius: 4px;
-    padding: 0.4rem 0.65rem;
+    padding: 0.36rem 0.6rem;
     font-family: var(--font-mono);
-    font-size: 0.68rem;
+    font-size: 0.64rem;
     color: var(--text-primary);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.75), 0 0 15px rgba(0, 255, 102, 0.18);
-    transform: translateZ(46px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 255, 102, 0.18);
+    transform: translateZ(58px);
     pointer-events: none;
     backdrop-filter: blur(6px);
 }
 
 .floating-prompt .prompt-tag {
     display: block;
-    font-size: 0.62rem;
+    font-size: 0.58rem;
     font-weight: 700;
     color: var(--accent-cyan);
     margin-bottom: 2px;
@@ -412,51 +412,58 @@ body::after {
 }
 
 .prompt-tl {
-    top: -16px;
-    left: -12px;
+    top: -22px;
+    left: -18px;
     animation: promptBob 4.2s ease-in-out infinite;
 }
 
 .prompt-tr {
-    top: 22px;
-    right: -14px;
+    top: 12px;
+    right: -20px;
     border-color: rgba(255, 30, 66, 0.45);
     border-left-color: var(--accent-red);
     animation: promptBob 5s ease-in-out infinite 0.8s;
 }
 
 .prompt-bl {
-    bottom: -10px;
-    left: -24px;
+    bottom: -14px;
+    left: -22px;
     border-color: rgba(0, 229, 255, 0.45);
     border-left-color: var(--accent-emerald);
     animation: promptBob 4.6s ease-in-out infinite 1.4s;
 }
 
 @keyframes promptBob {
-    0%, 100% { transform: translateZ(48px) translateY(0px); }
-    50% { transform: translateZ(56px) translateY(-6px); }
+    0%, 100% { transform: translateZ(56px) translateY(0px); }
+    50% { transform: translateZ(64px) translateY(-6px); }
 }
 
-/* Tampa / Tela do Notebook */
+/* Tampa / Tela do Notebook (Unibody Alumínio Escuro) */
 .laptop-lid {
-    background: linear-gradient(145deg, #161d26, #090d12);
-    border: 2px solid #263242;
-    border-bottom: none;
-    border-radius: 12px 12px 3px 3px;
-    padding: 9px 9px 7px;
+    position: relative;
+    width: 92%;
+    margin: 0 auto;
+    background: linear-gradient(160deg, #273240 0%, #141b24 45%, #0b0f15 100%);
+    border: 2px solid #384659;
+    border-bottom: 1px solid #090d12;
+    border-radius: 14px 14px 3px 3px;
+    padding: 8px 8px 5px;
     box-shadow:
-        0 0 0 1px rgba(0, 255, 102, 0.2),
-        0 18px 40px rgba(0, 0, 0, 0.85),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        0 -1px 0 rgba(255, 255, 255, 0.22),
+        0 0 0 1px rgba(0, 255, 102, 0.16),
+        0 14px 34px rgba(0, 0, 0, 0.85),
+        inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    transform-origin: bottom center;
+    transform: rotateX(-5deg);
     transform-style: preserve-3d;
 }
 
 .laptop-screen-bezel {
-    background: #030609;
-    border-radius: 7px 7px 2px 2px;
+    background: #04070b;
+    border-radius: 9px 9px 2px 2px;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.9);
 }
 
 .laptop-camera-bar {
@@ -465,65 +472,68 @@ body::after {
     justify-content: center;
     gap: 6px;
     padding: 4px 10px;
-    background: #060a0f;
+    background: #05080d;
     border-bottom: 1px solid rgba(0, 255, 102, 0.12);
     position: relative;
 }
 
 .cam-lens {
-    width: 6px;
-    height: 6px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
-    background: #1e293b;
-    border: 1px solid #475569;
+    background: radial-gradient(circle at 35% 35%, #38bdf8, #0f172a 70%);
+    border: 1px solid #334155;
 }
 
 .cam-led {
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     border-radius: 50%;
-    background: var(--accent-red);
-    box-shadow: 0 0 6px var(--accent-red);
-    animation: pulseDot 1.2s infinite;
+    background: var(--accent-cyan);
+    box-shadow: 0 0 6px var(--accent-cyan);
+    animation: pulseDot 1.6s infinite;
 }
 
 .tty-label {
     position: absolute;
     right: 10px;
     font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-size: 0.54rem;
     color: var(--text-secondary);
 }
 
 .laptop-screen {
     position: relative;
-    background: #04080e;
-    padding: 0.65rem;
+    background: radial-gradient(circle at 50% 25%, #07121b 0%, #03060a 100%);
+    padding: 0.55rem;
 }
 
 .screen-glare {
     position: absolute;
     inset: 0;
-    background: radial-gradient(
-        circle at var(--glare-x) var(--glare-y),
-        rgba(0, 255, 102, 0.11),
-        transparent 60%
-    );
+    background:
+        linear-gradient(125deg, rgba(255, 255, 255, 0.045) 0%, transparent 42%),
+        radial-gradient(
+            circle at var(--glare-x) var(--glare-y),
+            rgba(0, 255, 102, 0.11),
+            transparent 60%
+        );
     pointer-events: none;
     z-index: 5;
 }
 
 .terminal-window {
-    background: #020407;
+    background: rgba(2, 5, 9, 0.95);
     border: 1px solid rgba(0, 255, 102, 0.28);
-    border-radius: 6px;
+    border-radius: 5px;
     overflow: hidden;
     font-family: var(--font-mono);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.65);
 }
 
 .terminal-header {
-    background: #080e16;
-    padding: 0.42rem 0.75rem;
+    background: #080f18;
+    padding: 0.32rem 0.65rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -536,8 +546,8 @@ body::after {
 }
 
 .dot {
-    width: 9px;
-    height: 9px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
 }
 
@@ -546,20 +556,20 @@ body::after {
 .dot.green { background: #00ff66; }
 
 .term-title {
-    font-size: 0.68rem;
+    font-size: 0.62rem;
     color: var(--text-secondary);
 }
 
 .terminal-body {
-    padding: 0.75rem;
-    font-size: 0.74rem;
-    min-height: 90px;
+    padding: 0.55rem 0.65rem;
+    font-size: 0.68rem;
+    min-height: 76px;
     overflow-wrap: anywhere;
     word-break: break-word;
 }
 
 .terminal-body p {
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.28rem;
 }
 
 .term-prompt {
@@ -581,51 +591,51 @@ body::after {
 }
 
 .screen-hud-bar {
-    margin-top: 0.55rem;
-    padding: 0.5rem 0.65rem;
-    background: rgba(10, 16, 23, 0.9);
-    border: 1px solid rgba(0, 255, 102, 0.16);
-    border-radius: 6px;
+    margin-top: 0.45rem;
+    padding: 0.4rem 0.55rem;
+    background: rgba(10, 16, 23, 0.92);
+    border: 1px solid rgba(0, 255, 102, 0.18);
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.4rem;
 }
 
 .profile-mini {
     display: flex;
     align-items: center;
-    gap: 0.55rem;
+    gap: 0.45rem;
 }
 
 .profile-mini i {
     color: var(--accent-cyan);
-    font-size: 1.15rem;
+    font-size: 1rem;
 }
 
 .profile-mini strong {
     display: block;
-    font-size: 0.82rem;
+    font-size: 0.75rem;
     line-height: 1.1;
 }
 
 .role-tag {
     color: var(--text-secondary);
-    font-size: 0.68rem;
+    font-size: 0.62rem;
     font-family: var(--font-mono);
 }
 
 .hud-pills {
     display: flex;
-    gap: 0.4rem;
+    gap: 0.3rem;
     flex-wrap: wrap;
 }
 
 .hud-pills span {
     font-family: var(--font-mono);
-    font-size: 0.66rem;
-    padding: 0.2rem 0.45rem;
+    font-size: 0.6rem;
+    padding: 0.15rem 0.38rem;
     border-radius: 4px;
     background: rgba(0, 255, 102, 0.08);
     border: 1px solid rgba(0, 255, 102, 0.22);
@@ -636,88 +646,196 @@ body::after {
     color: var(--accent-cyan);
 }
 
-/* Base / Teclado 3D do Notebook */
+/* Queixo inferior da tela com logo do notebook */
+.laptop-chin {
+    background: linear-gradient(180deg, #070b10 0%, #0d131b 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 3px 0 2px;
+    text-align: center;
+}
+
+.laptop-brand-logo {
+    font-family: var(--font-mono);
+    font-size: 0.5rem;
+    letter-spacing: 0.22em;
+    color: #64748b;
+    font-weight: 600;
+}
+
+/* =========================================================
+   BASE / CHASSI INFERIOR 3D DO NOTEBOOK (TECLADO + TRACKPAD)
+   ========================================================= */
 .laptop-base {
     position: relative;
-    width: 108%;
-    margin-left: -4%;
-    background: linear-gradient(180deg, #1b2430 0%, #0d131a 75%, #070a0f 100%);
-    border: 1px solid #2b394a;
-    border-top: 2px solid rgba(0, 255, 102, 0.35);
-    border-radius: 2px 2px 14px 14px;
-    padding: 8px 18px 10px;
+    width: 100%;
+    margin: -2px auto -34px;
+    background: linear-gradient(180deg, #2b3646 0%, #1d2633 38%, #141b25 82%, #0e131b 100%);
+    border: 1.5px solid #435368;
+    border-top: 2px solid #52647c;
+    border-radius: 4px 4px 16px 16px;
+    padding: 8px 12px 10px;
     transform-origin: top center;
-    transform: rotateX(62deg);
+    transform: rotateX(48deg);
+    transform-style: preserve-3d;
     box-shadow:
-        0 18px 30px rgba(0, 0, 0, 0.9),
-        0 4px 0 #0b1017;
+        inset 0 1px 2px rgba(255, 255, 255, 0.25),
+        inset 0 -3px 8px rgba(0, 0, 0, 0.7),
+        0 10px 0 #121821,
+        0 12px 0 #090d13,
+        0 26px 38px rgba(0, 0, 0, 0.92);
 }
 
+/* Dobradiça central cilíndrica entre tela e base */
 .laptop-hinge {
-    width: 36%;
-    height: 4px;
-    margin: -8px auto 6px;
-    background: #05080c;
-    border-radius: 0 0 4px 4px;
+    width: 58%;
+    height: 7px;
+    margin: -9px auto 7px;
+    background: linear-gradient(180deg, #05070a 0%, #1e2733 50%, #080b10 100%);
+    border: 1px solid #2b3748;
+    border-radius: 2px 2px 4px 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.85);
 }
 
+/* Área superior do deck: Grelhas de som laterais + Berço do Teclado */
+.laptop-deck-top {
+    display: grid;
+    grid-template-columns: 14px 1fr 14px;
+    gap: 6px;
+    align-items: stretch;
+}
+
+.speaker-grille {
+    border-radius: 3px;
+    background-image: radial-gradient(rgba(5, 8, 12, 0.85) 1px, transparent 1px);
+    background-size: 3px 3px;
+    opacity: 0.75;
+    margin: 4px 0;
+}
+
+/* Berço rebaixado do teclado (Recessed Keyboard Well) */
 .laptop-keyboard {
-    background: #06090e;
-    border: 1px solid rgba(0, 255, 102, 0.22);
-    border-radius: 4px;
-    padding: 5px;
+    background: #070a0f;
+    border: 1.5px solid #0f151e;
+    border-bottom-color: rgba(255, 255, 255, 0.12);
+    border-radius: 5px;
+    padding: 5px 6px;
     display: flex;
     flex-direction: column;
     gap: 3px;
-    box-shadow: inset 0 0 12px rgba(0, 255, 102, 0.12);
+    box-shadow:
+        inset 0 3px 8px rgba(0, 0, 0, 0.95),
+        0 0 10px rgba(0, 255, 102, 0.08);
 }
 
 .kb-row {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    display: flex;
     gap: 3px;
+    width: 100%;
 }
 
+/* Teclas individuais com backlight verde/ciano sutil */
 .kb-row span {
-    height: 6px;
-    background: #121a24;
-    border-bottom: 1px solid rgba(0, 255, 102, 0.4);
-    border-radius: 1px;
+    flex: 1;
+    height: 9px;
+    background: linear-gradient(180deg, #1b2430 0%, #111720 100%);
+    border: 1px solid rgba(0, 0, 0, 0.85);
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    border-bottom: 1.5px solid rgba(0, 255, 102, 0.55);
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.9), 0 0 4px rgba(0, 255, 102, 0.15);
 }
 
-.kb-space-row {
-    grid-template-columns: 2fr 6fr 2fr;
+/* Linha F1-F12 mais baixa que as demais teclas */
+.kb-fn-row span {
+    height: 6px;
+}
+
+/* Proporções reais das teclas especiais */
+.kb-row .key-esc {
+    flex: 1.3;
+    background: linear-gradient(180deg, #7f1d1d 0%, #450a0a 100%);
+    border-bottom-color: var(--accent-red);
+}
+
+.kb-row .key-pwr {
+    flex: 1.1;
+    border-bottom-color: var(--accent-emerald);
+}
+
+.kb-row .key-wide { flex: 1.75; }
+.kb-row .key-tab { flex: 1.55; }
+.kb-row .key-caps { flex: 1.8; }
+.kb-row .key-enter { flex: 1.95; }
+.kb-row .key-shift { flex: 2.35; }
+.kb-row .kb-space { flex: 5.2; }
+.kb-row .key-arrows { flex: 1.8; }
+
+.kb-row .key-wasd {
+    border-bottom-color: var(--accent-emerald);
+    box-shadow: 0 0 5px rgba(0, 229, 255, 0.28);
+}
+
+/* Descanso de pulso (Palmrest) e Trackpad Force Touch */
+.laptop-palmrest {
+    padding: 8px 0 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .laptop-trackpad {
-    width: 28%;
-    height: 14px;
-    margin: 6px auto 2px;
-    background: #0b1017;
-    border: 1px solid rgba(0, 255, 102, 0.25);
-    border-radius: 3px;
+    width: 36%;
+    height: 34px;
+    background: linear-gradient(180deg, #161e29 0%, #111822 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-top-color: rgba(0, 0, 0, 0.65);
+    border-radius: 5px;
+    box-shadow:
+        inset 0 1px 4px rgba(0, 0, 0, 0.65),
+        0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
+/* Borda frontal 3D do chassi com entalhe de abertura (Lip Notch) */
 .laptop-front-lip {
-    height: 4px;
+    position: relative;
+    height: 7px;
+    margin: 4px -12px -10px;
+    background: linear-gradient(90deg, #0b1016 0%, #243040 20%, #2f3d50 50%, #243040 80%, #0b1016 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0 0 14px 14px;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .lip-notch {
     width: 18%;
-    height: 3px;
-    background: rgba(0, 255, 102, 0.45);
+    height: 4px;
+    background: #06090d;
+    border: 1px solid rgba(0, 255, 102, 0.4);
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.sleep-led {
+    position: absolute;
+    right: 22px;
+    top: 2px;
+    width: 5px;
+    height: 2px;
     border-radius: 2px;
+    background: var(--accent-cyan);
+    box-shadow: 0 0 6px var(--accent-cyan);
 }
 
 .laptop-shadow {
-    width: 90%;
-    height: 18px;
-    margin: -10px auto 0;
-    background: radial-gradient(ellipse at center, rgba(0, 255, 102, 0.32) 0%, rgba(0, 229, 255, 0.12) 45%, transparent 75%);
-    filter: blur(8px);
-    transform: translateZ(-30px);
+    width: 94%;
+    height: 24px;
+    margin: 22px auto 0;
+    background: radial-gradient(ellipse at center, rgba(0, 255, 102, 0.34) 0%, rgba(0, 229, 255, 0.14) 48%, transparent 75%);
+    filter: blur(10px);
+    transform: translateZ(-35px);
 }
 
 /* Sections */
@@ -1318,8 +1436,8 @@ body::after {
     }
 
     .laptop-base {
-        width: 102%;
-        margin-left: -1%;
+        width: 100%;
+        margin: -2px auto -30px;
     }
 
     .skill-card,
