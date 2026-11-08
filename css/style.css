@@ -343,7 +343,7 @@ body::after {
 .laptop-3d-rig {
     position: relative;
     width: 100%;
-    max-width: 500px;
+    max-width: 410px;
     transform-style: preserve-3d;
     transition: transform 0.14s ease-out;
     --glare-x: 50%;
@@ -426,8 +426,8 @@ body::after {
 }
 
 .prompt-bl {
-    bottom: 62px;
-    left: -14px;
+    bottom: -10px;
+    left: -24px;
     border-color: rgba(0, 229, 255, 0.45);
     border-left-color: var(--accent-emerald);
     animation: promptBob 4.6s ease-in-out infinite 1.4s;
@@ -553,7 +553,7 @@ body::after {
 .terminal-body {
     padding: 0.75rem;
     font-size: 0.74rem;
-    min-height: 112px;
+    min-height: 90px;
     overflow-wrap: anywhere;
     word-break: break-word;
 }
@@ -1313,7 +1313,7 @@ body::after {
     }
 
     .prompt-bl {
-        bottom: 48px;
+        bottom: -10px;
         left: 0;
     }
 
