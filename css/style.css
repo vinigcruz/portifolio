@@ -760,6 +760,81 @@ body::after {
     font-size: 0.95rem;
 }
 
+/* Topologia de Arquitetura de Rede (Defense-in-Depth) */
+.topology-board {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    align-items: stretch;
+    gap: 0.75rem;
+}
+
+.topo-node {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.35rem 1.15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.topo-node:hover {
+    border-color: var(--accent-cyan);
+    transform: translateY(-3px);
+}
+
+.topo-highlight {
+    border-color: rgba(0, 255, 102, 0.45);
+    box-shadow: 0 0 22px rgba(0, 255, 102, 0.08);
+}
+
+.topo-step {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    color: var(--accent-cyan);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.65rem;
+    display: block;
+}
+
+.topo-node i {
+    font-size: 1.4rem;
+    color: var(--accent-emerald);
+    margin-bottom: 0.65rem;
+}
+
+.topo-node h4 {
+    font-size: 1rem;
+    margin-bottom: 0.45rem;
+}
+
+.topo-node p {
+    font-size: 0.84rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.85rem;
+}
+
+.topo-node code {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    padding: 0.25rem 0.5rem;
+    background: rgba(0, 255, 102, 0.08);
+    border: 1px solid rgba(0, 255, 102, 0.2);
+    border-radius: 4px;
+    color: var(--accent-cyan);
+    align-self: flex-start;
+}
+
+.topo-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-cyan);
+    opacity: 0.65;
+    font-size: 1.1rem;
+}
+
 /* Grids & Cards */
 .skills-grid,
 .projects-grid {
@@ -1225,6 +1300,15 @@ body::after {
     .hero-grid,
     .contact-grid {
         grid-template-columns: 1fr;
+    }
+
+    .topology-board {
+        grid-template-columns: 1fr;
+    }
+
+    .topo-arrow {
+        transform: rotate(90deg);
+        padding: 0.25rem 0;
     }
 
     .mobile-toggle {

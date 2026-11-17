@@ -4,21 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#0a0f1d">
+    <meta name="theme-color" content="#030508">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Vinicius Cruz">
-    <title>Vinicius Guimarães | Infraestrutura &amp; Cibersegurança</title>
+    <title>Vinicius Guimarães | Network Security &amp; Infraestrutura de TI</title>
     <meta name="description"
-        content="Portfólio profissional de Vinicius Guimarães da Cruz — Especialista em Infraestrutura de TI, Redes Corporativas e Cibersegurança Defensiva (Blue Team).">
+        content="Portfólio de Engenharia de Segurança de Redes e Infraestrutura de Vinicius Guimarães da Cruz — NGFW, Segmentação de VLANs, IDS/IPS Suricata, Fortinet NSE 3 e Wazuh SIEM.">
     <link rel="manifest" href="./manifest.json">
     <link rel="icon" type="image/svg+xml" href="./icons/icon-192.svg?v=2">
     <link rel="apple-touch-icon" href="./icons/icon-192.svg?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -28,9 +28,9 @@
     <!-- Cabeçalho exclusivo para impressão / PDF -->
     <div class="print-only-header">
         <h1 id="print-name">Vinicius Guimarães da Cruz</h1>
-        <p>Infraestrutura de TI &bull; Redes Corporativas &bull; Cibersegurança (Blue Team)</p>
+        <p>Network Security &bull; Infraestrutura de Redes Corporativas &bull; Blue Team / SecOps</p>
         <p>
-            <span class="data-email">vinicius.infra.sec@gmail.com</span> |
+            <span class="data-email">viniciusgcruz@gmail.com</span> |
             <span class="data-phone">(41)9 8406-5476</span> |
             <span class="data-linkedin-url">www.linkedin.com/in/viniciusgcruz/</span> |
             <span class="data-github-url">github.com/vinigcruz</span>
@@ -42,7 +42,7 @@
         <div class="container nav-container">
             <a href="#inicio" class="nav-brand">
                 <span class="brand-icon"><i class="fa-solid fa-shield-halved"></i></span>
-                <span id="nav-brand-name">Vinicius Guimarães</span>
+                <span id="nav-brand-name">Vinicius Cruz</span>
             </a>
 
             <button id="mobile-toggle" class="mobile-toggle" aria-label="Abrir menu">
@@ -51,10 +51,11 @@
 
             <nav id="nav-menu" class="nav-menu">
                 <a href="#inicio" class="nav-link active">Início</a>
-                <a href="#sobre" class="nav-link">Sobre & Skills</a>
-                <a href="#experiencia" class="nav-link">Experiência</a>
-                <a href="#projetos" class="nav-link">Homelab & Projetos</a>
-                <a href="#pitch" class="nav-link">Vídeo Pitch</a>
+                <a href="#sobre" class="nav-link">NetSec &amp; Skills</a>
+                <a href="#arquitetura" class="nav-link">Topologia</a>
+                <a href="#experiencia" class="nav-link">Trajetória</a>
+                <a href="#projetos" class="nav-link">Laboratórios</a>
+                <a href="#pitch" class="nav-link">Pitch</a>
                 <a href="#contato" class="nav-link">Contato</a>
                 <div class="nav-actions">
                     <button id="btn-install-pwa" class="btn btn-secondary btn-sm" title="Instalar App no Celular">
@@ -62,7 +63,7 @@
                     </button>
                     <a id="btn-export-pdf-nav" href="./curriculo.pdf" target="_blank" rel="noopener noreferrer"
                         class="btn btn-outline btn-sm" title="Abrir Currículo em PDF">
-                        <i class="fa-solid fa-file-pdf"></i> PDF
+                        <i class="fa-solid fa-file-pdf"></i> Currículo PDF
                     </a>
                 </div>
             </nav>
@@ -76,21 +77,23 @@
                 <div class="hero-content">
                     <div class="status-badge">
                         <span class="status-dot"></span>
-                        <span>Disponível para Infraestrutura &amp; Blue Team / SecOps</span>
+                        <span>NETWORK SECURITY &amp; INFRASTRUCTURE OPERATIONS // SECOPS</span>
                     </div>
                     <h1 class="hero-title">
-                        Olá, eu sou <span id="hero-display-name" class="text-gradient">Vinicius Guimarães da Cruz</span>
+                        Engenharia de Redes Seguras &amp; Defesa Perimetral por <span id="hero-display-name"
+                            class="text-gradient">Vinicius Guimarães da Cruz</span>
                     </h1>
                     <p class="hero-subtitle">
-                        Profissional de <strong>Infraestrutura de TI &amp; Cibersegurança</strong> com 3,5 anos de
-                        experiência prática em redes corporativas, switches gerenciáveis (VLANs), Wi-Fi empresarial e
-                        laboratórios avançados de segurança defensiva com <strong>Proxmox, pfSense, Suricata e Wazuh
-                            SIEM</strong>.
+                        Profissional com <strong>3,5 anos de experiência em Infraestrutura de TI e Segurança de Redes
+                            (Network Security)</strong>. Especializado em segmentação L2/L3 (VLANs 802.1Q), firewalls de
+                        próxima geração (<strong>Fortinet NSE 3 &amp; pfSense</strong>), prevenção de intrusão
+                        (<strong>Suricata IDS/IPS</strong>), controle de domínio Windows Server/AD e telemetria contínua
+                        com <strong>Wazuh SIEM</strong>.
                     </p>
 
                     <div class="hero-cta-group">
-                        <a href="#projetos" class="btn btn-primary">
-                            <i class="fa-solid fa-server"></i> Ver Homelab &amp; Projetos
+                        <a href="#arquitetura" class="btn btn-primary">
+                            <i class="fa-solid fa-diagram-project"></i> Ver Arquitetura de Rede
                         </a>
                         <a id="hero-pdf-trigger" href="./curriculo.pdf" target="_blank" rel="noopener noreferrer"
                             class="btn btn-secondary">
@@ -110,31 +113,31 @@
                             rel="noopener noreferrer" class="social-pill">
                             <i class="fa-brands fa-github"></i> GitHub
                         </a>
-                        <a href="mailto:vinicius.infra.sec@gmail.com" class="social-pill data-email">
-                            vinicius.infra.sec@gmail.com
+                        <a href="mailto:viniciusgcruz@gmail.com" class="social-pill data-email">
+                            viniciusgcruz@gmail.com
                         </a>
                     </div>
                 </div>
 
-                <!-- Notebook 3D Interativo + Prompts Flutuantes (Estilo Mr. Robot) -->
+                <!-- Notebook 3D Interativo + Telemetria de Network Security -->
                 <div class="hero-visual">
                     <div id="laptop-3d-stage" class="laptop-3d-stage"
-                        title="Mova o cursor para rotacionar o notebook em 3D">
+                        title="Mova o cursor para rotacionar o console de Network Security em 3D">
                         <div id="laptop-3d-rig" class="laptop-3d-rig is-floating">
-                            <!-- Prompts Holográficos Flutuantes em 3D -->
+                            <!-- Prompts Holográficos de Telemetria de Rede em 3D -->
                             <div class="floating-prompt prompt-tl">
-                                <span class="prompt-tag">[FSOCIETY_NODE]</span>
-                                <code>root@kali:~# nmap -sS -Pn 10.0.10.0/24</code>
+                                <span class="prompt-tag">[NGFW_PERIMETER]</span>
+                                <code>fortios-cli # diagnose sys session stat</code>
                             </div>
 
                             <div class="floating-prompt prompt-tr">
-                                <span class="prompt-tag tag-red">[IDS_SURICATA]</span>
-                                <code>42,109 rules :: 0 intrusions</code>
+                                <span class="prompt-tag tag-red">[IPS_SURICATA_INLINE]</span>
+                                <code>42,109 rules :: 0 packet drops</code>
                             </div>
 
                             <div class="floating-prompt prompt-bl">
-                                <span class="prompt-tag tag-cyan">[WAZUH_SIEM]</span>
-                                <code>agent_status: ACTIVE [NSE3_LAB]</code>
+                                <span class="prompt-tag tag-cyan">[802.1Q_TRUNK_CORE]</span>
+                                <code>VLANs 10,20,30,40 :: ISOLATED</code>
                             </div>
 
                             <!-- Tela do Notebook (Lid) -->
@@ -143,7 +146,7 @@
                                     <div class="laptop-camera-bar">
                                         <span class="cam-lens"></span>
                                         <span class="cam-led"></span>
-                                        <span class="tty-label">TTY1 // SECOPS_OS v4.2</span>
+                                        <span class="tty-label">NETSEC-CONSOLE // NOC-SOC v5.0</span>
                                     </div>
 
                                     <div class="laptop-screen">
@@ -155,30 +158,32 @@
                                                     <span class="dot yellow"></span>
                                                     <span class="dot green"></span>
                                                 </div>
-                                                <span class="term-title">root@vg-secops:~# — bash</span>
+                                                <span class="term-title">netsec-admin@core-fw01:~# — ssh</span>
                                             </div>
                                             <div id="live-terminal-text" class="terminal-body">
-                                                <p><span class="term-prompt">root@secops:~#</span> nmap -sS -p 22,80,443
-                                                    10.0.10.1</p>
-                                                <p class="term-ok">[+] PORT 443/tcp OPEN (pfSense WebGUI) - 0.31ms</p>
-                                                <p class="term-cyan"><span class="term-prompt">root@secops:~#</span>
-                                                    infra-watchdog: HEALTHY <span class="cursor-blink">█</span></p>
+                                                <p><span class="term-prompt">netsec@fw01:~#</span> pfctl -s info
+                                                    &amp;&amp; suricata-stat --ips</p>
+                                                <p class="term-ok">[+] State Table: 4,812 active | IPS Inline: ENFORCED
+                                                    (0.28ms)</p>
+                                                <p class="term-cyan"><span class="term-prompt">netsec@fw01:~#</span>
+                                                    vlan-policy: Zero-Trust inter-VLAN ACLs ACTIVE <span
+                                                        class="cursor-blink">█</span></p>
                                             </div>
                                         </div>
 
                                         <!-- Sub-painel de status dentro da tela do notebook -->
                                         <div class="screen-hud-bar">
-                                            <div class="hud- profile-mini">
-                                                <i class="fa-solid fa-user-secret"></i>
+                                            <div class="profile-mini">
+                                                <i class="fa-solid fa-shield-halved"></i>
                                                 <div>
                                                     <strong id="card-profile-name">Vinicius Cruz</strong>
-                                                    <span class="role-tag">Infra &amp; Blue Team | 25y</span>
+                                                    <span class="role-tag">Network Security &amp; Infra | 25y</span>
                                                 </div>
                                             </div>
                                             <div class="hud-pills">
                                                 <span><strong class="metric-inline">3.5+</strong> Anos TI</span>
                                                 <span><strong class="metric-inline">&gt;95%</strong> SLA</span>
-                                                <span><strong class="metric-inline">24/7</strong> SIEM</span>
+                                                <span><strong class="metric-inline">NSE 3</strong> + Sec+</span>
                                             </div>
                                         </div>
                                     </div>
@@ -215,82 +220,144 @@
             </div>
         </section>
 
-        <!-- Sobre & Competências Técnicas -->
+        <!-- Sobre & Competências de Network Security -->
         <section id="sobre" class="section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Arquitetura &amp; Defesa</span>
-                    <h2 class="section-title">Sobre Mim &amp; Competências Técnicas</h2>
+                    <span class="section-tag">Defense-in-Depth &amp; NetSec</span>
+                    <h2 class="section-title">Domínio Técnico em Segurança de Redes</h2>
                     <p class="section-desc">
-                        Unindo a base sólida da camada física e lógica de redes à visibilidade e detecção de ameaças em
-                        Cibersegurança.
+                        Proteção em múltiplas camadas: da disponibilidade física do cabeamento e switching L2/L3 à
+                        inspeção profunda de pacotes (DPI) e resposta a incidentes via SIEM.
                     </p>
                 </div>
 
                 <div class="skills-grid">
                     <div class="skill-card">
-                        <div class="skill-icon"><i class="fa-solid fa-network-wired"></i></div>
-                        <h3>Redes &amp; Infraestrutura</h3>
-                        <p>Gerenciamento de switches L2/L3, segmentação por VLANs (802.1Q), STP, trunking, cabeamento
-                            estruturado e controladoras Wi-Fi corporativas (TP-Link Omada).</p>
+                        <div class="skill-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                        <h3>Segurança Perimetral &amp; NGFW</h3>
+                        <p>Administração de firewalls perimetrais pfSense e ecossistema Fortinet (NSE 3), regras de
+                            filtragem stateful, políticas Zero Trust Inter-VLAN, NAT, VPNs corporativas e inspeção
+                            inline com Suricata IDS/IPS.</p>
                         <div class="tag-list">
-                            <span>VLANs</span>
-                            <span>TCP/IP</span>
-                            <span>TP-Link Omada</span>
-                            <span>Cabeamento</span>
-                            <span>DHCP / DNS</span>
+                            <span>Fortinet NSE 3</span>
+                            <span>pfSense NGFW</span>
+                            <span>Suricata IDS/IPS</span>
+                            <span>Zero Trust ACLs</span>
+                            <span>VPN IPsec / SSL</span>
                         </div>
                     </div>
 
                     <div class="skill-card">
-                        <div class="skill-icon"><i class="fa-solid fa-shield-virus"></i></div>
-                        <h3>Cibersegurança &amp; Blue Team</h3>
-                        <p>Implementação de firewalls perimetrais pfSense, inspeção de tráfego com IDS/IPS Suricata,
-                            análise de eventos, monitoramento ativo via Wazuh SIEM e trilha Fortinet NSE 3.</p>
+                        <div class="skill-icon"><i class="fa-solid fa-network-wired"></i></div>
+                        <h3>Switching L2/L3 &amp; Segmentação</h3>
+                        <p>Arquitetura e sustentação de redes corporativas com segmentação por VLANs (IEEE 802.1Q),
+                            Trunking, Spanning Tree (RSTP), mitigação de ataques L2, cabeamento estruturado e gestão de
+                            clusters Wi-Fi TP-Link Omada.</p>
                         <div class="tag-list">
-                            <span>pfSense</span>
-                            <span>Suricata IDS/IPS</span>
-                            <span>Wazuh SIEM</span>
-                            <span>Fortinet NSE 3</span>
+                            <span>IEEE 802.1Q VLANs</span>
+                            <span>L2/L3 Switching</span>
+                            <span>RSTP / Trunking</span>
+                            <span>TP-Link Omada SDN</span>
+                            <span>DHCP / DNS Security</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fa-solid fa-eye"></i></div>
+                        <h3>SOC, SIEM &amp; Hardening de Sistemas</h3>
+                        <p>Coleta de syslogs de ativos de rede e agentes de endpoint no Wazuh SIEM, File Integrity
+                            Monitoring (FIM), administração segura de Windows Server (Active Directory / GPO) e
+                            virtualização em Proxmox VE.</p>
+                        <div class="tag-list">
+                            <span>Wazuh SIEM / XDR</span>
+                            <span>Active Directory &amp; GPO</span>
+                            <span>Proxmox VE</span>
+                            <span>CIS Hardening</span>
                             <span>CompTIA Security+ (Prep)</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="fa-solid fa-cubes"></i></div>
-                        <h3>Virtualização &amp; Operações</h3>
-                        <p>Administração de ambientes virtualizados com Proxmox VE, servidores Linux/Windows, suporte
-                            N1/N2 com SLA acima de 95% e documentação técnica.</p>
-                        <div class="tag-list">
-                            <span>Proxmox VE</span>
-                            <span>Linux Server</span>
-                            <span>Windows Server</span>
-                            <span>Active Directory</span>
-                            <span>SLA &gt; 95%</span>
-                        </div>
+        <!-- Topologia de Arquitetura Defensiva (Network Security Blueprint) -->
+        <section id="arquitetura" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Network Security Topology</span>
+                    <h2 class="section-title">Arquitetura de Defesa em Profundidade</h2>
+                    <p class="section-desc">
+                        Modelo operacional aplicado para isolamento de superfícies de ataque, controle de tráfego L3/L4
+                        e visibilidade centralizada.
+                    </p>
+                </div>
+
+                <div class="topology-board">
+                    <div class="topo-node">
+                        <span class="topo-step">CAMADA 01 // BORDA</span>
+                        <i class="fa-solid fa-globe"></i>
+                        <h4>WAN / Link Dedicado</h4>
+                        <p>Mitigação de exposição externa, bloqueio de portas não autorizadas e túneis VPN
+                            criptografados.</p>
+                        <code>Ingress Filtering</code>
+                    </div>
+
+                    <div class="topo-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                    <div class="topo-node topo-highlight">
+                        <span class="topo-step">CAMADA 02 // PERÍMETRO</span>
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h4>Firewall NGFW + IPS</h4>
+                        <p>pfSense &amp; Conceitos Fortinet NSE 3 com Suricata Inline analisando assinaturas de ameaças.
+                        </p>
+                        <code>DPI + Stateful ACLs</code>
+                    </div>
+
+                    <div class="topo-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                    <div class="topo-node">
+                        <span class="topo-step">CAMADA 03 // CORE L2/L3</span>
+                        <i class="fa-solid fa-sitemap"></i>
+                        <h4>Microssegmentação VLAN</h4>
+                        <p>Switches gerenciáveis e APs Omada separando tráfego por perfil (Gerência, Corp, DMZ e
+                            Visitantes).</p>
+                        <code>802.1Q Trunking</code>
+                    </div>
+
+                    <div class="topo-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                    <div class="topo-node">
+                        <span class="topo-step">CAMADA 04 // TELEMETRIA</span>
+                        <i class="fa-solid fa-chart-line"></i>
+                        <h4>SOC &amp; Wazuh SIEM</h4>
+                        <p>Correlação em tempo real de logs do Firewall, Active Directory e servidores Linux/Windows.
+                        </p>
+                        <code>SIEM + FIM 24/7</code>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Experiência Profissional -->
-        <section id="experiencia" class="section section-alt">
+        <section id="experiencia" class="section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Trajetória</span>
-                    <h2 class="section-title">Experiência Profissional &amp; Certificações</h2>
+                    <span class="section-tag">Carreira &amp; Certificações</span>
+                    <h2 class="section-title">Experiência Profissional &amp; Trilha Técnica</h2>
                 </div>
 
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <span class="timeline-date">2,5 Anos &bull; Atuação Principal</span>
+                            <span class="timeline-date">2,5 Anos &bull; Infraestrutura &amp; Redes Corporativas</span>
                             <h3>Técnico de Infraestrutura de TI</h3>
                             <p>
-                                Responsável pela sustentação da infraestrutura de rede corporativa, configuração e
-                                manutenção de switches gerenciáveis com segmentação em VLANs, administração de Access
-                                Points corporativos e suporte direto aos usuários mantendo índice de SLA superior a 95%.
+                                Sustentação de conectividade e segurança de rede corporativa, configuração de switches
+                                gerenciáveis com segmentação por VLANs, gerenciamento de controladoras e Access Points
+                                empresariais, diagnóstico de camada física/lógica e atendimento técnico mantendo índice
+                                de SLA superior a 95%.
                             </p>
                         </div>
                     </div>
@@ -298,11 +365,12 @@
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <span class="timeline-date">1 Ano &bull; Início de Carreira</span>
+                            <span class="timeline-date">1 Ano &bull; Base Operacional</span>
                             <h3>Estagiário de Infraestrutura &amp; Suporte de TI</h3>
                             <p>
-                                Atuação no diagnóstico de hardware, manutenção preventiva, organização de racks e patch
-                                panels, configuração de estações de trabalho e atendimento de chamados técnicos.
+                                Organização e estruturação de racks de telecomunicações, patch panels, cabeamento
+                                estruturado, manutenção preventiva de ativos de rede, provisionamento de estações e
+                                suporte direto a usuários.
                             </p>
                         </div>
                     </div>
@@ -310,15 +378,13 @@
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <span class="timeline-date">Em Andamento &bull; Trilha de Aprendizagem &amp;
-                                Certificações</span>
+                            <span class="timeline-date">Em Andamento &bull; Especialização em Network Security</span>
                             <h3>Fortinet NSE 3 &amp; Preparação CompTIA Security+</h3>
                             <p>
-                                Evolução contínua na trilha oficial de segurança de redes <strong>Fortinet NSE
-                                    3</strong> e preparação para a certificação <strong>CompTIA Security+</strong>, com
-                                aprofundamento prático em firewalls de próxima geração (NGFW), análise de
-                                vulnerabilidades, resposta a incidentes, correlação de logs em SIEM e arquitetura Zero
-                                Trust.
+                                Especialização focada em segurança de redes corporativas com a trilha oficial
+                                <strong>Fortinet NSE 3</strong> e preparação para a certificação internacional
+                                <strong>CompTIA Security+ (SY0-701)</strong>, cobrindo arquiteturas NGFW, segmentação
+                                Zero Trust, resposta a incidentes e análise de vulnerabilidades.
                             </p>
                         </div>
                     </div>
@@ -326,70 +392,92 @@
             </div>
         </section>
 
-        <!-- Homelab & Projetos -->
-        <section id="projetos" class="section">
+        <!-- Homelab & Projetos de Engenharia -->
+        <section id="projetos" class="section section-alt">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Laboratório Prático</span>
-                    <h2 class="section-title">Homelab &amp; Projetos de Engenharia</h2>
+                    <span class="section-tag">Engenharia Aplicada</span>
+                    <h2 class="section-title">Laboratórios de Network Security &amp; Infraestrutura</h2>
                     <p class="section-desc">
-                        Ambientes reais simulados para validação de políticas de segurança, segmentação de tráfego e
-                        observabilidade.
+                        Ambientes empresariais reproduzidos em laboratório para validação de regras de firewall,
+                        detecção de intrusão, controle de domínio e resposta a incidentes.
                     </p>
                 </div>
 
                 <div class="projects-grid">
                     <article class="project-card">
                         <div class="project-top">
-                            <span class="project-badge"><i class="fa-solid fa-fire-flame-curved"></i> Firewall &amp;
-                                IDS/IPS</span>
+                            <span class="project-badge"><i class="fa-solid fa-fire-flame-curved"></i> Perímetro NGFW
+                                &amp; IPS</span>
                         </div>
-                        <h3>Perímetro Defensivo com pfSense &amp; Suricata</h3>
+                        <h3>Arquitetura Perimetral com pfSense &amp; Suricata Inline</h3>
                         <p>
-                            Topologia segmentada em múltiplas VLANs (Gerência, Corporativo, IoT e SOC) protegida por
-                            pfSense com mais de 42 mil regras ativas no Suricata para bloqueio de varreduras e exploits.
+                            Topologia de rede segmentada em 4 VLANs (Gerência, Corporativo, DMZ e SOC) protegida por
+                            pfSense e inspeção profunda de pacotes com mais de 42 mil assinaturas ativas no Suricata
+                            para bloqueio automático de port scans, força bruta e exploits de rede.
                         </p>
                         <div class="tag-list">
                             <span>pfSense</span>
-                            <span>Suricata</span>
-                            <span>VLAN Tagging</span>
-                            <span>Firewall Rules</span>
+                            <span>Suricata IPS</span>
+                            <span>IEEE 802.1Q</span>
+                            <span>Stateful Firewall</span>
                         </div>
                     </article>
 
                     <article class="project-card">
                         <div class="project-top">
-                            <span class="project-badge"><i class="fa-solid fa-eye"></i> SOC &amp; SIEM</span>
+                            <span class="project-badge"><i class="fa-solid fa-eye"></i> Visibilidade SOC &amp;
+                                SIEM</span>
                         </div>
-                        <h3>Monitoramento Centralizado com Wazuh SIEM</h3>
+                        <h3>Telemetria de Rede e Endpoints com Wazuh SIEM</h3>
                         <p>
-                            Implantação do Wazuh Manager integrado a agentes Linux e Windows para monitoramento de
-                            integridade de arquivos (FIM), detecção de força bruta SSH/RDP e conformidade CIS
-                            Benchmarks.
+                            Centralização de logs de firewall, switches e agentes Windows/Linux no Wazuh Manager para
+                            detecção de movimentação lateral, ataques de força bruta SSH/RDP, monitoramento de
+                            integridade de arquivos (FIM) e auditoria CIS Benchmarks.
                         </p>
                         <div class="tag-list">
                             <span>Wazuh SIEM</span>
-                            <span>Log Analysis</span>
+                            <span>Syslog / EventLog</span>
                             <span>FIM</span>
-                            <span>Blue Team</span>
+                            <span>Incident Detection</span>
                         </div>
                     </article>
 
                     <article class="project-card">
                         <div class="project-top">
-                            <span class="project-badge"><i class="fa-solid fa-server"></i> Virtualização</span>
+                            <span class="project-badge"><i class="fa-solid fa-building-shield"></i> Identidade &amp;
+                                Domínio</span>
                         </div>
-                        <h3>Cluster Homelab em Proxmox VE</h3>
+                        <h3>Infraestrutura Windows Server, AD DS &amp; GPO Hardening</h3>
                         <p>
-                            Ambiente virtualizado de alta disponibilidade executando containers LXC e máquinas virtuais
-                            para testes de ataque/defesa, snapshots automatizados e redes virtuais isoladas (Linux
-                            Bridges).
+                            Simulação de rede corporativa com Controlador de Domínio Active Directory, DNS/DHCP
+                            integrados, File Server com permissões NTFS granulares e políticas de grupo (GPO) para
+                            bloqueio de superfície de ataque em estações Windows 11.
+                        </p>
+                        <div class="tag-list">
+                            <span>Windows Server</span>
+                            <span>Active Directory</span>
+                            <span>GPO Hardening</span>
+                            <span>DNS / DHCP</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-top">
+                            <span class="project-badge"><i class="fa-solid fa-server"></i> Virtualização &amp; Pentest
+                                Lab</span>
+                        </div>
+                        <h3>Cluster Proxmox VE &amp; Simulação de Ameaças</h3>
+                        <p>
+                            Infraestrutura virtualizada sobre Proxmox VE utilizando Linux Bridges isoladas para
+                            execução controlada de cenários de auditoria com Kali Linux, Parrot OS e Metasploitable 3,
+                            validando a eficácia dos alertas gerados na stack defensiva.
                         </p>
                         <div class="tag-list">
                             <span>Proxmox VE</span>
-                            <span>LXC / KVM</span>
                             <span>Linux Bridges</span>
-                            <span>Backup</span>
+                            <span>Kali / Parrot OS</span>
+                            <span>Vulnerability Assessment</span>
                         </div>
                     </article>
                 </div>
@@ -397,13 +485,13 @@
         </section>
 
         <!-- Vídeo Pitch Interativo -->
-        <section id="pitch" class="section section-alt">
+        <section id="pitch" class="section">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Apresentação Pessoal</span>
+                    <span class="section-tag">Apresentação Executiva</span>
                     <h2 class="section-title">Vídeo Pitch Profissional</h2>
                     <p class="section-desc">
-                        Assista à apresentação rápida de <strong id="video-author-name">Vinicius Guimarães</strong> ou
+                        Assista à apresentação rápida de <strong id="video-author-name">Vinicius Cruz</strong> ou
                         acompanhe o player interativo com transcrição sincronizada.
                     </p>
                 </div>
@@ -415,7 +503,7 @@
                                 <i class="fa-solid fa-play"></i>
                             </button>
                             <h3>Iniciar Pitch Interativo (02:45)</h3>
-                            <p>Clique para reproduzir a apresentação com teleprompter sincronizado.</p>
+                            <p>Clique para reproduzir a apresentação técnica com teleprompter sincronizado.</p>
                         </div>
 
                         <!-- Player Simulado controlado por PitchPlayer.js -->
@@ -469,27 +557,27 @@
         </section>
 
         <!-- Contato & Networking -->
-        <section id="contato" class="section">
+        <section id="contato" class="section section-alt">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-tag">Vamos Conversar</span>
-                    <h2 class="section-title">Contato &amp; Canais Profissionais</h2>
+                    <span class="section-tag">Canais Diretos</span>
+                    <h2 class="section-title">Contato &amp; Oportunidades</h2>
                     <p class="section-desc">
-                        Entre em contato para oportunidades em Infraestrutura de TI, Redes, Suporte N2/N3 ou
-                        Cibersegurança (SOC / Blue Team).
+                        Disponível para atuação em Segurança de Redes (Network Security), Infraestrutura de TI, NOC/SOC
+                        e Analista de Suporte/Redes N2/N3.
                     </p>
                 </div>
 
                 <div class="contact-grid">
                     <div class="contact-info-card">
-                        <h3>Canais Diretos</h3>
+                        <h3>Informações de Contato</h3>
                         <ul class="contact-list">
                             <li>
                                 <i class="fa-solid fa-envelope"></i>
                                 <div>
                                     <span>E-mail</span>
-                                    <a href="mailto:vinicius.infra.sec@gmail.com"
-                                        class="data-email">vinicius.infra.sec@gmail.com</a>
+                                    <a href="mailto:viniciusgcruz@gmail.com"
+                                        class="data-email">viniciusgcruz@gmail.com</a>
                                 </div>
                             </li>
                             <li>
@@ -525,7 +613,7 @@
                             </a>
                             <a id="net-github-btn" href="https://github.com/vinigcruz" target="_blank"
                                 rel="noopener noreferrer" class="btn btn-outline">
-                                <i class="fa-brands fa-github"></i> Repositórios
+                                <i class="fa-brands fa-github"></i> GitHub
                             </a>
                             <a id="btn-export-pdf" href="./curriculo.pdf" target="_blank" rel="noopener noreferrer"
                                 class="btn btn-secondary">
@@ -549,7 +637,7 @@
                             <div class="form-group">
                                 <label for="form-message">Mensagem</label>
                                 <textarea id="form-message" rows="4" required
-                                    placeholder="Olá Vinicius, gostaríamos de conversar sobre uma oportunidade..."></textarea>
+                                    placeholder="Olá Vinicius, gostaríamos de conversar sobre uma oportunidade na área de Redes e Segurança..."></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">
                                 <i class="fa-solid fa-paper-plane"></i> Enviar Mensagem
@@ -565,8 +653,8 @@
     <!-- Rodapé -->
     <footer class="footer">
         <div class="container footer-container">
-            <p>&copy; 2026 <strong id="footer-name">Vinicius Guimarães</strong> &mdash; Infraestrutura de TI &amp;
-                Cibersegurança.</p>
+            <p>&copy; 2026 <strong id="footer-name">Vinicius Cruz</strong> &mdash; Network Security &amp;
+                Infraestrutura de TI.</p>
             <div class="footer-links">
                 <a id="footer-btn-pdf" href="./curriculo.pdf" target="_blank" rel="noopener noreferrer"
                     class="btn-link"><i class="fa-solid fa-file-pdf"></i> Abrir Currículo

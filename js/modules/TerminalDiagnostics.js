@@ -6,29 +6,29 @@ export class TerminalDiagnostics {
         this.currentIndex = 0;
         this.commands = [
             {
-                cmd: 'nmap -sS -p 22,80,443 10.0.10.1',
-                res: '[+] PORT 443/tcp OPEN (pfSense WebGUI) - Latency 0.31ms',
-                status: 'infra-watchdog: perimeter firewall ACTIVE'
+                cmd: 'pfctl -s info && suricata-stat --ips',
+                res: '[+] State Table: 4,812 active | IPS Inline: ENFORCED (0.28ms)',
+                status: 'vlan-policy: Zero-Trust inter-VLAN ACLs ACTIVE'
             },
             {
-                cmd: 'wazuh-control status && tail -n 1 alerts.log',
-                res: '[+] Wazuh Manager RUNNING [Agent 10.0.40.5:1514 CONNECTED]',
-                status: 'siem-monitor: 0 unauthorized privilege escalations'
+                cmd: 'fortios-cli # diagnose sys session stat',
+                res: '[+] NGFW Sessions: 1,940 established | 0 anomalies detected',
+                status: 'nse3-profile: SSL/TLS Deep Inspection & IPS ENABLED'
             },
             {
-                cmd: 'vlan-diag --show-trunks --interface=eth0',
-                res: '[+] Trunk Port 24: VLANs 10,20,30,40 tagged [STP Forwarding]',
-                status: 'net-segmentation: L2/L3 isolation VERIFIED'
+                cmd: 'switch-core # show vlan brief | grep 802.1Q',
+                res: '[+] Trunk Gi0/24: VLAN 10(Mgmt) 20(Corp) 30(DMZ) 40(SOC)',
+                status: 'l2-security: DHCP Snooping & Port-Security VERIFIED'
             },
             {
-                cmd: 'suricata -c /etc/suricata/suricata.yaml -T',
-                res: '[+] Ruleset verified: 42,109 signatures loaded in IPS mode',
-                status: 'fortinet-nse3-lab: zero-trust policy ENFORCED'
+                cmd: 'wazuh-control status && tail -n 1 /var/ossec/logs/alerts.log',
+                res: '[+] Wazuh SIEM Manager RUNNING [18 Agents Online - 1514/tcp]',
+                status: 'soc-telemetry: CIS Benchmark & FIM integrity OK'
             },
             {
-                cmd: 'Get-ADDomainController -Discover | Select HostName',
-                res: '[+] DC01.corp.homelab.local [GPO & Kerberos HEALTHY]',
-                status: 'ad-forest: Windows Server & Win11 clients SYNCED'
+                cmd: 'Get-ADDomainController -Discover | Select HostName, Site',
+                res: '[+] DC01.corp.netsec.local [Kerberos & GPO Hardening OK]',
+                status: 'ad-security: Tier-0 Domain Admin isolation ACTIVE'
             }
         ];
         this.init();
@@ -44,9 +44,9 @@ export class TerminalDiagnostics {
         this.currentIndex = (this.currentIndex + 1) % this.commands.length;
         const item = this.commands[this.currentIndex];
         this.container.innerHTML = `
-      <p><span class="term-prompt">root@secops:~#</span> ${item.cmd}</p>
+      <p><span class="term-prompt">netsec@fw01:~#</span> ${item.cmd}</p>
       <p class="term-ok">${item.res}</p>
-      <p class="term-cyan"><span class="term-prompt">root@secops:~#</span> ${item.status} <span class="cursor-blink">█</span></p>
+      <p class="term-cyan"><span class="term-prompt">netsec@fw01:~#</span> ${item.status} <span class="cursor-blink">█</span></p>
     `;
     }
 

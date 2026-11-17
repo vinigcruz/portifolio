@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: vinicius-cruz-netsec-portfolio
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: true
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /sw.js
+        name: Cache-Control
+        value: no-cache, no-store, must-revalidate
+      - path: /manifest.json
+        name: Cache-Control
+        value: public, max-age=0, must-revalidate
+      - path: /*.pdf
+        name: Content-Type
+        value: application/pdf
+      - path: /*.pdf
+        name: Content-Disposition
+        value: inline
+
