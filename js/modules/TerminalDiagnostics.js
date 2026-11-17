@@ -6,29 +6,29 @@ export class TerminalDiagnostics {
         this.currentIndex = 0;
         this.commands = [
             {
-                cmd: 'pfctl -s info && suricata-stat --ips',
-                res: '[+] State Table: 4,812 active | IPS Inline: ENFORCED (0.28ms)',
-                status: 'vlan-policy: Zero-Trust inter-VLAN ACLs ACTIVE'
+                cmd: 'fortiap-diag --status --ssid=CORP',
+                res: '[+] FortiAPs Online | Sinal Estável | Isolamento de SSID Visitante OK',
+                status: 'osi-check: Camadas L1/L2/L3 íntegras'
             },
             {
-                cmd: 'fortios-cli # diagnose sys session stat',
-                res: '[+] NGFW Sessions: 1,940 established | 0 anomalies detected',
-                status: 'nse3-profile: SSL/TLS Deep Inspection & IPS ENABLED'
+                cmd: 'unifi-controller --rf-scan --band=5ghz',
+                res: '[+] Canais 5GHz otimizados | Interferência: BAIXA | Roaming ativo',
+                status: 'wlan-sec: Autenticação WPA2/WPA3 e VLAN Tagging OK'
             },
             {
-                cmd: 'switch-core # show vlan brief | grep 802.1Q',
-                res: '[+] Trunk Gi0/24: VLAN 10(Mgmt) 20(Corp) 30(DMZ) 40(SOC)',
-                status: 'l2-security: DHCP Snooping & Port-Security VERIFIED'
+                cmd: 'switch-l2 # show vlan brief | verify-isolation',
+                res: '[+] VLAN 10 (Gerência) | VLAN 20 (Corporativo) | VLAN 30 (Visitantes)',
+                status: 'net-concept: Segmentação de domínio de broadcast ATIVA'
             },
             {
-                cmd: 'wazuh-control status && tail -n 1 /var/ossec/logs/alerts.log',
-                res: '[+] Wazuh SIEM Manager RUNNING [18 Agents Online - 1514/tcp]',
-                status: 'soc-telemetry: CIS Benchmark & FIM integrity OK'
+                cmd: 'ping -n 4 gateway.local && nslookup dc01.corp.local',
+                res: '[+] Latência média: 0.4ms | Resolução DNS e concessão DHCP íntegras',
+                status: 'infra-sla: Operação mantendo SLA > 95%'
             },
             {
-                cmd: 'Get-ADDomainController -Discover | Select HostName, Site',
-                res: '[+] DC01.corp.netsec.local [Kerberos & GPO Hardening OK]',
-                status: 'ad-security: Tier-0 Domain Admin isolation ACTIVE'
+                cmd: 'netsec-review --principles="CIA,Least-Privilege"',
+                res: '[+] Confidencialidade, Integridade e Disponibilidade validadas',
+                status: 'fortinet-nse3: Trilha de Network Security em evolução'
             }
         ];
         this.init();
@@ -44,9 +44,9 @@ export class TerminalDiagnostics {
         this.currentIndex = (this.currentIndex + 1) % this.commands.length;
         const item = this.commands[this.currentIndex];
         this.container.innerHTML = `
-      <p><span class="term-prompt">netsec@fw01:~#</span> ${item.cmd}</p>
+      <p><span class="term-prompt">net-infra:~#</span> ${item.cmd}</p>
       <p class="term-ok">${item.res}</p>
-      <p class="term-cyan"><span class="term-prompt">netsec@fw01:~#</span> ${item.status} <span class="cursor-blink">█</span></p>
+      <p class="term-cyan"><span class="term-prompt">net-infra:~#</span> ${item.status} <span class="cursor-blink">█</span></p>
     `;
     }
 

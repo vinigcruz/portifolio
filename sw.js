@@ -1,4 +1,4 @@
-const CACHE_NAME = 'secops-portfolio-v7';
+const CACHE_NAME = 'secops-portfolio-v11';
 const ASSETS_TO_CACHE = [
     './',
     './index.html',
@@ -9,7 +9,6 @@ const ASSETS_TO_CACHE = [
     './js/app.js',
     './js/modules/ToastNotification.js',
     './js/modules/UserProfile.js',
-    './js/modules/PitchPlayer.js',
     './js/modules/TerminalDiagnostics.js',
     './js/modules/PDFExporter.js',
     './js/modules/NavigationController.js',

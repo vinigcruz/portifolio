@@ -1,6 +1,5 @@
 import { ToastNotification } from './modules/ToastNotification.js';
 import { UserProfile } from './modules/UserProfile.js';
-import { PitchPlayer } from './modules/PitchPlayer.js';
 import { TerminalDiagnostics } from './modules/TerminalDiagnostics.js';
 import { PDFExporter } from './modules/PDFExporter.js';
 import { NavigationController } from './modules/NavigationController.js';
@@ -11,7 +10,6 @@ export class PortfolioApp {
     constructor() {
         this.toast = new ToastNotification();
         this.userProfile = new UserProfile();
-        this.pitchPlayer = new PitchPlayer(this.toast);
         this.terminal = new TerminalDiagnostics();
         this.pdfExporter = new PDFExporter(this.toast, this.userProfile);
         this.navigation = new NavigationController();
